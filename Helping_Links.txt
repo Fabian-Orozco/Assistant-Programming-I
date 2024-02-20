@@ -1,0 +1,23 @@
+
+Función printf
+
+http://www.it.uc3m.es/pbasanta/asng/course_notes/input_output_printf_es.html
+
+expresiones regulares
+http://puntocomnoesunlenguaje.blogspot.com/2013/07/ejemplos-expresiones-regulares-java-split.html
+
+Sitio web para practicar regex
+https://regex101.com/
+
+javadoc
+https://www.oracle.com/technical-resources/articles/java/javadoc-tool.html
+
+Sintaxis básica MD
+https://www.markdownguide.org/basic-syntax/
+
+Sitio para previsualizar MD
+https://markdownlivepreview.com/
+
+Git cheat sheet
+https://training.github.com/downloads/es_ES/github-git-cheat-sheet.pdf
+

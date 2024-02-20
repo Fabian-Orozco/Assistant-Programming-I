@@ -1,0 +1,48 @@
+En un gimnasio, el personal desea calcular de forma rápida el índice de masa 
+corporal de los clientes y determinar si su estado actual es adecuado. Se pide 
+que la salida tenga un formato como el presentado en el ejemplo. Es decir, 
+informar la masa, la altura en centimetros y el IMC. La fórmula para hacer el 
+calculo de IMC es la siguiente:
+
+ICM = peso(kg) / altura^2 (m)
+
+En la entrada se recibe en la primera linea la masa en kilogramos, en la segunda 
+linea, la altura en centímetros. Una vez calculado el IMC, debe de informar en 
+qué categoría se encuentra según el IMC. Para eso usar la siguiente tabla
+
+ 
+Rango 	            Estado
+----------------------------------
+< 18.5 	            Bajo peso
+≥ 18.5 y < 25.0 	Normal
+≥ 25.0 y < 30.0 	Sobrepeso
+≥ 30 	            Obesidad
+
+
+Ejemplo de entrada:
+
+70
+175
+
+Ejemplo de salida:
+
+70 175 22.86 Normal
+
+Si la masa es mayor a 1000 o negativa y la altura es igual o menor a cero y 
+mayor a 300 cm, se debe de mostrar el mensaje de error "datos inválidos"
+
+
+1. Leer un valor
+2. Imprimir un valor
+3. Crear una varialber con un valor
+4. Cambiarle el valor a una variable
+5. Condicionar una instrucción
+6. Repetir una instrucción
+7. Hacer/ejecutar una subtarea
+8. Definir una subtarea
+9. Return 
+
+
+
+
+

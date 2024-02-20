@@ -1,0 +1,43 @@
+
+procedure comenzar do
+	create masa := leerValor()
+	create altura := leerValor()
+
+	if masa > 1000 or masa < 0 do
+		print "datos inválidos"
+		return
+	end
+
+	if altura > 300 or altura <= 0 do
+		print "datos inválidos"
+		return
+	end
+
+	create IMC := calcularIMC(masa, altura)
+
+	create estado := clasificarIMC(IMC)
+
+	imprimirRespuesta(masa, altura, IMC, estado)
+
+end
+
+procedure calcularIMC(masa, altura) do
+	create IMC := masa / (altura/100)^2
+	return IMC
+end
+
+procedure clasificarIMC(IMC) do
+	if IMC < 18.5 do
+		return "Bajo peso"
+	else if IMC < 25 do
+		return "Normal"
+	else if IMC < 30 do 
+		return "Sobrepeso"
+	else 
+		return "Obesidad"
+	end if else
+end
+
+procedure imprimirRespuesta(masa, altura, IMC, estado) do 
+	print masa + " " + altura + " " + IMC + " " + estado
+end

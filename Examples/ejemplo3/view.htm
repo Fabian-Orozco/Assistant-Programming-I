@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html  dir="ltr" lang="es-mx" xml:lang="es-mx" class="no-js">
+<head>
+    <title>III.S.2021.RRF.CI-0112.901: Ejemplo 3 - Enunciado Permutaciones y Combinaciones (Imagen HackerRank)</title>
+    <link rel="shortcut icon" href="https://mv1.mediacionvirtual.ucr.ac.cr/pluginfile.php/1/theme_essential/favicon/1646031602/favicon.ico"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="moodle, III.S.2021.RRF.CI-0112.901: Ejemplo 3 - Enunciado Permutaciones y Combinaciones (Imagen HackerRank)" />
+<link rel="stylesheet" type="text/css" href="https://mv1.mediacionvirtual.ucr.ac.cr/theme/yui_combo.php/rollup/3.17.2/yui-moodlesimple-min.css" /><script id="firstthemesheet" type="text/css">/** Required in order to fix style inclusion problems in IE with YUI **/</script><link rel="stylesheet" type="text/css" href="https://mv1.mediacionvirtual.ucr.ac.cr/theme/styles.php/essential/1646031602_1611854027/all" />
+<link rel="stylesheet" type="text/css" href="https://mv1.mediacionvirtual.ucr.ac.cr/blocks/accessibility/userstyles.php?instance_id=128" />
+<script type="text/javascript">
+//<![CDATA[
+var M = {}; M.yui = {};
+M.pageloadstarttime = new Date();
+M.cfg = {"wwwroot":"https:\/\/mv1.mediacionvirtual.ucr.ac.cr","sesskey":"YUN4O2GoOz","themerev":"1646031602","slasharguments":1,"theme":"essential","iconsystemmodule":"core\/icon_system_fontawesome","jsrev":"1646031602","admin":"admin","svgicons":true,"usertimezone":"Am\u00e9rica\/Costa_Rica","contextid":2010219};var yui1ConfigFn = function(me) {if(/-skin|reset|fonts|grids|base/.test(me.name)){me.type='css';me.path=me.path.replace(/\.js/,'.css');me.path=me.path.replace(/\/yui2-skin/,'/assets/skins/sam/yui2-skin')}};
+var yui2ConfigFn = function(me) {var parts=me.name.replace(/^moodle-/,'').split('-'),component=parts.shift(),module=parts[0],min='-min';if(/-(skin|core)$/.test(me.name)){parts.pop();me.type='css';min=''}
+if(module){var filename=parts.join('-');me.path=component+'/'+module+'/'+filename+min+'.'+me.type}else{me.path=component+'/'+component+'.'+me.type}};
+YUI_config = {"debug":false,"base":"https:\/\/mv1.mediacionvirtual.ucr.ac.cr\/lib\/yuilib\/3.17.2\/","comboBase":"https:\/\/mv1.mediacionvirtual.ucr.ac.cr\/theme\/yui_combo.php\/","combine":true,"filter":null,"insertBefore":"firstthemesheet","groups":{"yui2":{"base":"https:\/\/mv1.mediacionvirtual.ucr.ac.cr\/lib\/yuilib\/2in3\/2.9.0\/build\/","comboBase":"https:\/\/mv1.mediacionvirtual.ucr.ac.cr\/theme\/yui_combo.php\/","combine":true,"ext":false,"root":"2in3\/2.9.0\/build\/","patterns":{"yui2-":{"group":"yui2","configFn":yui1ConfigFn}}},"moodle":{"name":"moodle","base":"https:\/\/mv1.mediacionvirtual.ucr.ac.cr\/theme\/yui_combo.php\/m\/1646031602\/","combine":true,"comboBase":"https:\/\/mv1.mediacionvirtual.ucr.ac.cr\/theme\/yui_combo.php\/","ext":false,"root":"m\/1646031602\/","patterns":{"moodle-":{"group":"moodle","configFn":yui2ConfigFn}},"filter":null,"modules":{"moodle-core-lockscroll":{"requires":["plugin","base-build"]},"moodle-core-event":{"requires":["event-custom"]},"moodle-core-dragdrop":{"requires":["base","node","io","dom","dd","event-key","event-focus","moodle-core-notification"]},"moodle-core-chooserdialogue":{"requires":["base","panel","moodle-core-notification"]},"moodle-core-notification":{"requires":["moodle-core-notification-dialogue","moodle-core-notification-alert","moodle-core-notification-confirm","moodle-core-notification-exception","moodle-core-notification-ajaxexception"]},"moodle-core-notification-dialogue":{"requires":["base","node","panel","escape","event-key","dd-plugin","moodle-core-widget-focusafterclose","moodle-core-lockscroll"]},"moodle-core-notification-alert":{"requires":["moodle-core-notification-dialogue"]},"moodle-core-notification-confirm":{"requires":["moodle-core-notification-dialogue"]},"moodle-core-notification-exception":{"requires":["moodle-core-notification-dialogue"]},"moodle-core-notification-ajaxexception":{"requires":["moodle-core-notification-dialogue"]},"moodle-core-languninstallconfirm":{"requires":["base","node","moodle-core-notification-confirm","moodle-core-notification-alert"]},"moodle-core-actionmenu":{"requires":["base","event","node-event-simulate"]},"moodle-core-maintenancemodetimer":{"requires":["base","node"]},"moodle-core-blocks":{"requires":["base","node","io","dom","dd","dd-scroll","moodle-core-dragdrop","moodle-core-notification"]},"moodle-core-tooltip":{"requires":["base","node","io-base","moodle-core-notification-dialogue","json-parse","widget-position","widget-position-align","event-outside","cache-base"]},"moodle-core-formchangechecker":{"requires":["base","event-focus","moodle-core-event"]},"moodle-core-handlebars":{"condition":{"trigger":"handlebars","when":"after"}},"moodle-core-checknet":{"requires":["base-base","moodle-core-notification-alert","io-base"]},"moodle-core-popuphelp":{"requires":["moodle-core-tooltip"]},"moodle-core-dock":{"requires":["base","node","event-custom","event-mouseenter","event-resize","escape","moodle-core-dock-loader","moodle-core-event"]},"moodle-core-dock-loader":{"requires":["escape"]},"moodle-core_availability-form":{"requires":["base","node","event","event-delegate","panel","moodle-core-notification-dialogue","json"]},"moodle-backup-backupselectall":{"requires":["node","event","node-event-simulate","anim"]},"moodle-backup-confirmcancel":{"requires":["node","node-event-simulate","moodle-core-notification-confirm"]},"moodle-course-formatchooser":{"requires":["base","node","node-event-simulate"]},"moodle-course-dragdrop":{"requires":["base","node","io","dom","dd","dd-scroll","moodle-core-dragdrop","moodle-core-notification","moodle-course-coursebase","moodle-course-util"]},"moodle-course-util":{"requires":["node"],"use":["moodle-course-util-base"],"submodules":{"moodle-course-util-base":{},"moodle-course-util-section":{"requires":["node","moodle-course-util-base"]},"moodle-course-util-cm":{"requires":["node","moodle-course-util-base"]}}},"moodle-course-categoryexpander":{"requires":["node","event-key"]},"moodle-course-management":{"requires":["base","node","io-base","moodle-core-notification-exception","json-parse","dd-constrain","dd-proxy","dd-drop","dd-delegate","node-event-delegate"]},"moodle-course-modchooser":{"requires":["moodle-core-chooserdialogue","moodle-course-coursebase"]},"moodle-form-dateselector":{"requires":["base","node","overlay","calendar"]},"moodle-form-passwordunmask":{"requires":[]},"moodle-form-shortforms":{"requires":["node","base","selector-css3","moodle-core-event"]},"moodle-form-showadvanced":{"requires":["node","base","selector-css3"]},"moodle-question-chooser":{"requires":["moodle-core-chooserdialogue"]},"moodle-question-preview":{"requires":["base","dom","event-delegate","event-key","core_question_engine"]},"moodle-question-qbankmanager":{"requires":["node","selector-css3"]},"moodle-question-searchform":{"requires":["base","node"]},"moodle-availability_completion-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_date-form":{"requires":["base","node","event","io","moodle-core_availability-form"]},"moodle-availability_grade-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_group-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_grouping-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_profile-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-qtype_ddimageortext-dd":{"requires":["node","dd","dd-drop","dd-constrain"]},"moodle-qtype_ddimageortext-form":{"requires":["moodle-qtype_ddimageortext-dd","form_filepicker"]},"moodle-qtype_ddmarker-dd":{"requires":["node","event-resize","dd","dd-drop","dd-constrain","graphics"]},"moodle-qtype_ddmarker-form":{"requires":["moodle-qtype_ddmarker-dd","form_filepicker","graphics","escape"]},"moodle-qtype_ddwtos-dd":{"requires":["node","dd","dd-drop","dd-constrain"]},"moodle-mod_assign-history":{"requires":["node","transition"]},"moodle-mod_forum-subscriptiontoggle":{"requires":["base-base","io-base"]},"moodle-mod_quiz-dragdrop":{"requires":["base","node","io","dom","dd","dd-scroll","moodle-core-dragdrop","moodle-core-notification","moodle-mod_quiz-quizbase","moodle-mod_quiz-util-base","moodle-mod_quiz-util-page","moodle-mod_quiz-util-slot","moodle-course-util"]},"moodle-mod_quiz-modform":{"requires":["base","node","event"]},"moodle-mod_quiz-util":{"requires":["node","moodle-core-actionmenu"],"use":["moodle-mod_quiz-util-base"],"submodules":{"moodle-mod_quiz-util-base":{},"moodle-mod_quiz-util-slot":{"requires":["node","moodle-mod_quiz-util-base"]},"moodle-mod_quiz-util-page":{"requires":["node","moodle-mod_quiz-util-base"]}}},"moodle-mod_quiz-repaginate":{"requires":["base","event","node","io","moodle-core-notification-dialogue"]},"moodle-mod_quiz-quizbase":{"requires":["base","node"]},"moodle-mod_quiz-questionchooser":{"requires":["moodle-core-chooserdialogue","moodle-mod_quiz-util","querystring-parse"]},"moodle-mod_quiz-toolboxes":{"requires":["base","node","event","event-key","io","moodle-mod_quiz-quizbase","moodle-mod_quiz-util-slot","moodle-core-notification-ajaxexception"]},"moodle-mod_quiz-autosave":{"requires":["base","node","event","event-valuechange","node-event-delegate","io-form"]},"moodle-message_airnotifier-toolboxes":{"requires":["base","node","io"]},"moodle-filter_glossary-autolinker":{"requires":["base","node","io-base","json-parse","event-delegate","overlay","moodle-core-event","moodle-core-notification-alert","moodle-core-notification-exception","moodle-core-notification-ajaxexception"]},"moodle-filter_mathjaxloader-loader":{"requires":["moodle-core-event"]},"moodle-editor_atto-rangy":{"requires":[]},"moodle-editor_atto-editor":{"requires":["node","transition","io","overlay","escape","event","event-simulate","event-custom","node-event-html5","node-event-simulate","yui-throttle","moodle-core-notification-dialogue","moodle-core-notification-confirm","moodle-editor_atto-rangy","handlebars","timers","querystring-stringify"]},"moodle-editor_atto-plugin":{"requires":["node","base","escape","event","event-outside","handlebars","event-custom","timers","moodle-editor_atto-menu"]},"moodle-editor_atto-menu":{"requires":["moodle-core-notification-dialogue","node","event","event-custom"]},"moodle-format_grid-gridkeys":{"requires":["event-nav-keys"]},"moodle-report_eventlist-eventfilter":{"requires":["base","event","node","node-event-delegate","datatable","autocomplete","autocomplete-filters"]},"moodle-report_loglive-fetchlogs":{"requires":["base","event","node","io","node-event-delegate"]},"moodle-gradereport_grader-gradereporttable":{"requires":["base","node","event","handlebars","overlay","event-hover"]},"moodle-gradereport_history-userselector":{"requires":["escape","event-delegate","event-key","handlebars","io-base","json-parse","moodle-core-notification-dialogue"]},"moodle-tool_capability-search":{"requires":["base","node"]},"moodle-tool_lp-dragdrop-reorder":{"requires":["moodle-core-dragdrop"]},"moodle-tool_monitor-dropdown":{"requires":["base","event","node"]},"moodle-assignfeedback_editpdf-editor":{"requires":["base","event","node","io","graphics","json","event-move","event-resize","transition","querystring-stringify-simple","moodle-core-notification-dialog","moodle-core-notification-alert","moodle-core-notification-warning","moodle-core-notification-exception","moodle-core-notification-ajaxexception"]},"moodle-atto_accessibilitychecker-button":{"requires":["color-base","moodle-editor_atto-plugin"]},"moodle-atto_accessibilityhelper-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_align-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_bold-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_bsgrid-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_charmap-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_chemistry-button":{"requires":["moodle-editor_atto-plugin","moodle-core-event","io","event-valuechange","tabview","array-extras"]},"moodle-atto_clear-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_collapse-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_count-button":{"requires":["io","json-parse","moodle-editor_atto-plugin"]},"moodle-atto_emoticon-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_equation-button":{"requires":["moodle-editor_atto-plugin","moodle-core-event","io","event-valuechange","tabview","array-extras"]},"moodle-atto_html-button":{"requires":["moodle-editor_atto-plugin","event-valuechange"]},"moodle-atto_image-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_indent-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_italic-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_link-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_managefiles-usedfiles":{"requires":["node","escape"]},"moodle-atto_managefiles-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_media-button":{"requires":["moodle-editor_atto-plugin","moodle-form-shortforms"]},"moodle-atto_noautolink-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_orderedlist-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_preview-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_recordrtc-recording":{"requires":["moodle-atto_recordrtc-button"]},"moodle-atto_recordrtc-button":{"requires":["moodle-editor_atto-plugin","moodle-atto_recordrtc-recording"]},"moodle-atto_rtl-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_strike-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_subscript-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_superscript-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_table-button":{"requires":["moodle-editor_atto-plugin","moodle-editor_atto-menu","event","event-valuechange"]},"moodle-atto_title-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_underline-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_undo-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_unorderedlist-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_wordimport-button":{"requires":["moodle-editor_atto-plugin"]}}},"gallery":{"name":"gallery","base":"https:\/\/mv1.mediacionvirtual.ucr.ac.cr\/lib\/yuilib\/gallery\/","combine":true,"comboBase":"https:\/\/mv1.mediacionvirtual.ucr.ac.cr\/theme\/yui_combo.php\/","ext":false,"root":"gallery\/1646031602\/","patterns":{"gallery-":{"group":"gallery"}}}},"modules":{"core_filepicker":{"name":"core_filepicker","fullpath":"https:\/\/mv1.mediacionvirtual.ucr.ac.cr\/lib\/javascript.php\/1646031602\/repository\/filepicker.js","requires":["base","node","node-event-simulate","json","async-queue","io-base","io-upload-iframe","io-form","yui2-treeview","panel","cookie","datatable","datatable-sort","resize-plugin","dd-plugin","escape","moodle-core_filepicker","moodle-core-notification-dialogue"]},"core_comment":{"name":"core_comment","fullpath":"https:\/\/mv1.mediacionvirtual.ucr.ac.cr\/lib\/javascript.php\/1646031602\/comment\/comment.js","requires":["base","io-base","node","json","yui2-animation","overlay","escape"]},"mathjax":{"name":"mathjax","fullpath":"https:\/\/cdn.jsdelivr.net\/npm\/mathjax@2.7.8\/MathJax.js?delayStartupUntil=configured"},"block_accessibility":{"name":"block_accessibility","fullpath":"https:\/\/mv1.mediacionvirtual.ucr.ac.cr\/lib\/javascript.php\/1646031602\/blocks\/accessibility\/module.js","requires":["base","node","stylesheet"]}}};
+M.yui.loader = {modules: {}};
+
+//]]>
+</script>
+
+<!-- Start Matomo Code -->
+<script type="text/javascript">
+var _paq = _paq || [];
+_paq.push(['setDocumentTitle', 'Área de Ingeniería/Facultad de Ingeniería/Escuela de Ciencias de la Computación e Informática/III - S - 2021 - RRF - Programación 1 - 901/resource/Ejemplo 3 - Enunciado Permutaciones y Combinaciones (Imagen HackerRank)']);
+
+_paq.push(['setUserId', 'fabian.orozcochaves']);
+_paq.push(['setCustomVariable','1','Nombre_Completo','Fabian Alberto Orozco Chaves', 'visit']);
+_paq.push(['setCustomVariable','2','Correo','fabian.orozcochaves@ucr.ac.cr', 'visit']);
+_paq.push(['setCustomVariable','3','Id_Usuario_Moodle','62244', 'visit']);
+_paq.push(['setCustomDimension', 1, 'Asistente de curso']);
+_paq.push(['trackPageView']);
+_paq.push(['enableLinkTracking']);
+_paq.push(['enableHeartBeatTimer', 30]);
+(function() {
+  var u='//analytics.metics.ucr.ac.cr/';
+  _paq.push(['setTrackerUrl', u+'matomo.php']);
+  _paq.push(['setSiteId', '1']);
+  var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+})();
+</script>
+<!-- End Matomo Code -->    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Google web fonts -->
+        <link href='//fonts.googleapis.com/css?family=Roboto|Roboto&subset=latin' rel='stylesheet' type='text/css'>
+    <!-- iOS Homescreen Icons -->
+    
+<link rel="apple-touch-icon" sizes="57x57" href="https://mv1.mediacionvirtual.ucr.ac.cr/theme/image.php/essential/theme/1646031602/homeicon/iphone"/>
+<link rel="apple-touch-icon" sizes="72x72" href="https://mv1.mediacionvirtual.ucr.ac.cr/theme/image.php/essential/theme/1646031602/homeicon/ipad"/>
+<link rel="apple-touch-icon" sizes="114x114" href="https://mv1.mediacionvirtual.ucr.ac.cr/theme/image.php/essential/theme/1646031602/homeicon/iphone_retina"/>
+<link rel="apple-touch-icon" sizes="144x144" href="https://mv1.mediacionvirtual.ucr.ac.cr/theme/image.php/essential/theme/1646031602/homeicon/ipad_retina"/></head>
+
+<body  id="page-mod-resource-view" class="format-topics  path-mod path-mod-resource safari dir-ltr lang-es_mx yui-skin-sam yui3-skin-sam mv1-mediacionvirtual-ucr-ac-cr pagelayout-incourse course-24864 context-2010219 cmid-1535011 category-1460 loggedin desktopdevice pagewidthwide floatingsubmit has-region-side-post used-region-side-post side-post-only">
+
+<div class="skiplinks">
+    <a href="#maincontent" class="skip">Saltar al contenido principal</a>
+</div><script type="text/javascript" src="https://mv1.mediacionvirtual.ucr.ac.cr/theme/yui_combo.php/rollup/3.17.2/yui-moodlesimple-min.js"></script><script type="text/javascript" src="https://mv1.mediacionvirtual.ucr.ac.cr/lib/javascript.php/1646031602/lib/javascript-static.js"></script>
+<script type="text/javascript">
+//<![CDATA[
+document.body.className += ' jsenabled';
+//]]>
+</script>
+
+
+<header role="banner">
+    <div id="page-header" class="clearfix oldnavbar logo">
+        <div class="container-fluid">
+            <div class="row-fluid">
+                <!-- HEADER: LOGO AREA -->
+<div class="pull-left logo-container"><a class="logo" href="//mv1.mediacionvirtual.ucr.ac.cr" title="Página Principal"><img src="//mv1.mediacionvirtual.ucr.ac.cr/pluginfile.php/1/theme_essential/logo/1646031602/logo_mediacionvirtual-01.png" class="img-responsive" alt="Página Principal" /></a>                </div>
+                                <a class="btn btn-icon collapsed" data-toggle="collapse" data-target="#essentialicons">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </a>
+
+                <div id='essentialicons' class="collapse pull-right">
+                        <div class="pull-right" id="socialnetworks">
+                            <p class="socialheading">Redes sociales</p>
+                            <ul class="socials unstyled">
+                                <li><button type="button" class="socialicon facebook" onclick="window.open(&#039;https://es-la.facebook.com/METICS.UNIVERSIDADCOSTARICA/&#039;)" title="Facebook" aria-label="Facebook"><span aria-hidden="true" class="fa fa-facebook"></span><span class="sr-only"></span></button></li><li><button type="button" class="socialicon youtube" onclick="window.open(&#039;https://www.youtube.com/channel/UCSkBx5SWVITT1Tbb9PSNBRQ&#039;)" title="YouTube" aria-label="YouTube"><span aria-hidden="true" class="fa fa-youtube"></span><span class="sr-only"></span></button></li><li><button type="button" class="socialicon website" onclick="window.open(&#039;https://metics.ucr.ac.cr&#039;)" title="Página Web" aria-label="Página Web"><span aria-hidden="true" class="fa fa-globe"></span><span class="sr-only"></span></button></li>                            </ul>
+                        </div>
+                                    </div>
+            </div>
+        </div>
+    </div>
+    <nav id="essentialnavbar" role="navigation" class="moodle-has-zindex oldnavbar logo">
+        <div class="navbar">
+            <div class="container-fluid navbar-inner">
+                <div class="row-fluid">
+                    <div class="custommenus pull-left">
+                        <a class="btn btn-navbar" data-toggle="collapse" data-target="#essentialmenus">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </a>
+                                            <div class="pull-right">
+                        <div class="usermenu navbarrightitem">
+                            <ul class="nav"><li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="https://mv1.mediacionvirtual.ucr.ac.cr/mod/resource/view.php?id=1535011"><img src="https://mv1.mediacionvirtual.ucr.ac.cr/pluginfile.php/655299/user/icon/essential/f1?rev=16492851" class="userpicture" width="72" height="72" alt="Imagen de FABIAN ALBERTO OROZCO CHAVES" title="Imagen de FABIAN ALBERTO OROZCO CHAVES" />FABIAN ALBERTO<span aria-hidden="true" class="fa fa-caret-right"></span></a><ul class="dropdown-menu pull-right"><li><a href="https://mv1.mediacionvirtual.ucr.ac.cr/user/profile.php?id=62244"><em><span aria-hidden="true" class="fa fa-user"></span>FABIAN ALBERTO OROZCO CHAVES</em></a></li><li class="dropdown-submenu preferences"><a class="dropdown-toggle" data-toggle="dropdown" href="https://mv1.mediacionvirtual.ucr.ac.cr/mod/resource/view.php?id=1535011"><em><span aria-hidden="true" class="fa fa-cog"></span>Preferencias</em></a><ul class="dropdown-menu"><li><a href="https://mv1.mediacionvirtual.ucr.ac.cr/user/preferences.php?userid=62244"><em><span aria-hidden="true" class="fa fa-user"></span>Usuario</em></a></li><li><a href="https://mv1.mediacionvirtual.ucr.ac.cr/user/edit.php?id=62244"><em><span aria-hidden="true" class="fa fa-info-circle"></span>Editar perfil</em></a></li><li><a href="https://mv1.mediacionvirtual.ucr.ac.cr/login/change_password.php"><em><span aria-hidden="true" class="fa fa-key"></span>Cambiar contraseña</em></a></li><li><a href="https://mv1.mediacionvirtual.ucr.ac.cr/message/edit.php?id=62244"><em><span aria-hidden="true" class="fa fa-comments"></span>Mensaje</em></a></li><li><a href="https://mv1.mediacionvirtual.ucr.ac.cr/blog/preferences.php"><em><span aria-hidden="true" class="fa fa-rss-square"></span>Blog</em></a></li></ul></li><hr class="sep" /><li><a href="https://mv1.mediacionvirtual.ucr.ac.cr/calendar/view.php"><em><span aria-hidden="true" class="fa fa-calendar"></span>Calendario</em></a></li><li><a href="https://mv1.mediacionvirtual.ucr.ac.cr/message/index.php"><em><span aria-hidden="true" class="fa fa-envelope"></span>Mensajes</em></a></li><li><a href="https://mv1.mediacionvirtual.ucr.ac.cr/user/files.php"><em><span aria-hidden="true" class="fa fa-file"></span>Archivos privados</em></a></li><li><a href="https://mv1.mediacionvirtual.ucr.ac.cr/mod/forum/user.php?id=62244"><em><span aria-hidden="true" class="fa fa-list-alt"></span>Mensajes en foros</em></a></li><li><a href="https://mv1.mediacionvirtual.ucr.ac.cr/mod/forum/user.php?id=62244&amp;mode=discussions"><em><span aria-hidden="true" class="fa fa-list"></span>Discusiones</em></a></li><hr class="sep" /><li><a href="https://mv1.mediacionvirtual.ucr.ac.cr/login/logout.php?sesskey=YUN4O2GoOz"><em><span aria-hidden="true" class="fa fa-sign-out"></span>Salir</em></a></li><li><a target="_blank" href="https://metics.ucr.ac.cr/manuales/"><em><span aria-hidden="true" class="fa fa-question-circle"></span>Ayuda</em></a></li></ul></li></ul>                        </div>
+                        <div class="messagemenu navbarrightitem">
+                            <div class="popover-region collapsed popover-region-messages"
+    id="nav-message-popover-container" data-userid="62244"
+    data-region="popover-region">
+    <div class="popover-region-toggle nav-link"
+        data-region="popover-region-toggle"
+        role="button"
+        aria-controls="popover-region-container-621eeac254a6c621eeac235bd413"
+        aria-haspopup="true"
+        aria-label="Mostrar ventana de mensajes sin nuevos mensajes"
+        tabindex="0">
+                <i class="icon fa fa-comment fa-fw "  title="Mostrar/Ocultar menú de mensajes" aria-label="Mostrar/Ocultar menú de mensajes"></i>
+        <div class="count-container hidden" data-region="count-container">0</div>
+
+    </div>
+    <div 
+        id="popover-region-container-621eeac254a6c621eeac235bd413"
+        class="popover-region-container"
+        data-region="popover-region-container"
+        aria-expanded="false"
+        aria-hidden="true"
+        aria-label="Ventana de notificación"
+        role="region">
+        <div class="popover-region-header-container">
+            <h3 class="popover-region-header-text" data-region="popover-region-header-text">Mensajes</h3>
+            <div class="popover-region-header-actions" data-region="popover-region-header-actions">        <div class="newmessage-link">
+            <a href="https://mv1.mediacionvirtual.ucr.ac.cr/message/index.php?contactsfirst=1">Nuevo mensaje
+            </a>
+        </div>
+        <a class="mark-all-read-button"
+           href="#"
+           role="button"
+           title="Marcar todo como leído"
+           data-action="mark-all-read">
+            <span class="normal-icon"><i class="icon fa fa-check fa-fw "  title="Marcar todo como leído" aria-label="Marcar todo como leído"></i></span>
+            <span class="loading-icon"><i class="icon fa fa-circle-o-notch fa-spin fa-fw "  title="Cargando" aria-label="Cargando"></i></span>
+        </a>
+        <a href="https://mv1.mediacionvirtual.ucr.ac.cr/message/edit.php?id=62244"
+           title="Preferencias de Mensaje">
+            <i class="icon fa fa-cog fa-fw "  title="Preferencias de Mensaje" aria-label="Preferencias de Mensaje"></i>
+        </a>
+</div>
+        </div>
+        <div class="popover-region-content-container" data-region="popover-region-content-container">
+            <div class="popover-region-content" data-region="popover-region-content">
+                        <div class="messages" data-region="messages" role="log" aria-busy="false" aria-atomic="false" aria-relevant="additions"></div>
+        <div class="empty-message" data-region="empty-message" tabindex="0">No hay mensajes</div>
+
+            </div>
+            <span class="loading-icon"><i class="icon fa fa-circle-o-notch fa-spin fa-fw "  title="Cargando" aria-label="Cargando"></i></span>
+        </div>
+                <a class="see-all-link"
+                    href="https://mv1.mediacionvirtual.ucr.ac.cr/message/index.php">
+                    <div class="popover-region-footer-container">
+                        <div class="popover-region-seeall-text">Verlo todo</div>
+                    </div>
+                </a>
+    </div>
+</div><div class="popover-region collapsed popover-region-notifications"
+    id="nav-notification-popover-container" data-userid="62244"
+    data-region="popover-region">
+    <div class="popover-region-toggle nav-link"
+        data-region="popover-region-toggle"
+        role="button"
+        aria-controls="popover-region-container-621eeac256475621eeac235bd414"
+        aria-haspopup="true"
+        aria-label="Mostrar ventana de notificación sin notificaciones nuevas"
+        tabindex="0">
+                <i class="icon fa fa-bell fa-fw "  title="Mostrar/Ocultar menú de notificaciones" aria-label="Mostrar/Ocultar menú de notificaciones"></i>
+        <div class="count-container hidden" data-region="count-container">0</div>
+
+    </div>
+    <div 
+        id="popover-region-container-621eeac256475621eeac235bd414"
+        class="popover-region-container"
+        data-region="popover-region-container"
+        aria-expanded="false"
+        aria-hidden="true"
+        aria-label="Ventana de notificación"
+        role="region">
+        <div class="popover-region-header-container">
+            <h3 class="popover-region-header-text" data-region="popover-region-header-text">Notificaciones</h3>
+            <div class="popover-region-header-actions" data-region="popover-region-header-actions">        <a class="mark-all-read-button"
+           href="#"
+           title="Marcar todo como leído"
+           data-action="mark-all-read"
+           role="button">
+            <span class="normal-icon"><i class="icon fa fa-check fa-fw "  title="Marcar todo como leído" aria-label="Marcar todo como leído"></i></span>
+            <span class="loading-icon"><i class="icon fa fa-circle-o-notch fa-spin fa-fw "  title="Cargando" aria-label="Cargando"></i></span>
+        </a>
+        <a href="https://mv1.mediacionvirtual.ucr.ac.cr/message/notificationpreferences.php?userid=62244"
+           title="Preferencias de notificación">
+            <i class="icon fa fa-cog fa-fw "  title="Preferencias de notificación" aria-label="Preferencias de notificación"></i>
+        </a>
+</div>
+        </div>
+        <div class="popover-region-content-container" data-region="popover-region-content-container">
+            <div class="popover-region-content" data-region="popover-region-content">
+                        <div class="all-notifications"
+            data-region="all-notifications"
+            role="log"
+            aria-busy="false"
+            aria-atomic="false"
+            aria-relevant="additions"></div>
+        <div class="empty-message" tabindex="0" data-region="empty-message">Usted no tiene notificaciones</div>
+
+            </div>
+            <span class="loading-icon"><i class="icon fa fa-circle-o-notch fa-spin fa-fw "  title="Cargando" aria-label="Cargando"></i></span>
+        </div>
+                <a class="see-all-link"
+                    href="https://mv1.mediacionvirtual.ucr.ac.cr/message/output/popup/notifications.php">
+                    <div class="popover-region-footer-container">
+                        <div class="popover-region-seeall-text">Verlo todo</div>
+                    </div>
+                </a>
+    </div>
+</div>                        </div>
+                        <div class="navbarrightitem">
+                            <ul class="nav"><li><a title="Ir al fondo de la página" href="#region-main"><span aria-hidden="true" class="fa fa-arrow-circle-o-down"></span></a></li></ul>                        </div>
+                                                <div class="moodle-actionmenu navbarrightitem" id="action-menu-1" data-enhance="moodle-core-actionmenu">
+
+        <ul class="menubar nav" id="action-menu-1-menubar" role="menubar">
+
+            
+            
+            <li role="presentation"><a href="#" class="toggle-display textmenu" id="action-menu-toggle-1" title="Configuraciones del módulo" role="menuitem"><i class="icon fa fa-cog fa-fw "  title="Configuraciones del módulo" aria-label="Configuraciones del módulo"></i><span aria-hidden="true" class="fa fa-caret-right"></span></a>
+</li>
+
+        </ul>
+
+
+        <ul class="menu align-tr-br" id="action-menu-1-menu" data-rel="menu-content" aria-labelledby="action-menu-toggle-1" role="menu" data-align="tr-br">
+            <li role="presentation">
+
+    <a href="https://mv1.mediacionvirtual.ucr.ac.cr/admin/roles/permissions.php?contextid=2010219" id="action_link621eeac235bd415" class=""  role="menuitem" ><i class="icon fa fa-angle-right fa-fw " aria-hidden="true"  ></i>Permisos</a>
+
+
+
+</li><li role="presentation">
+
+    <a href="https://mv1.mediacionvirtual.ucr.ac.cr/report/log/index.php?chooselog=1&id=24864&modid=1535011" id="action_link621eeac235bd416" class=""  role="menuitem" ><i class="icon fa fa-angle-right fa-fw " aria-hidden="true"  ></i>Bitácoras</a>
+
+
+
+</li>
+        </ul>
+</div>                        <div id="custom_menu_editing" class="navbarrightitem">
+                                                    </div>
+                        <div class="navbarrightitem">
+                                                    </div>
+                    </div>
+                        <div id="essentialmenus" class="nav-collapse collapse pull-left">
+                            <div id="custom_menu_language" class="custom_menu"><ul class="nav"><li class="dropdown langmenu"><a href="https://mv1.mediacionvirtual.ucr.ac.cr/mod/resource/view.php?id=1535011" class="dropdown-toggle" data-toggle="dropdown" title="Idioma"><span aria-hidden="true" class="fa fa-flag"></span>Español ‎(es_mx)‎<span aria-hidden="true" class="fa fa-caret-right"></span></a><div class="dropdown-menu"><ul><li><a title="Deutsch ‎(de)‎" href="https://mv1.mediacionvirtual.ucr.ac.cr/mod/resource/view.php?id=1535011&amp;lang=de"><span aria-hidden="true" class="fa fa-language"></span>Deutsch ‎(de)‎</a></li><li><a title="English ‎(en)‎" href="https://mv1.mediacionvirtual.ucr.ac.cr/mod/resource/view.php?id=1535011&amp;lang=en"><span aria-hidden="true" class="fa fa-language"></span>English ‎(en)‎</a></li><li><a title="Español ‎(es_mx)‎" href="https://mv1.mediacionvirtual.ucr.ac.cr/mod/resource/view.php?id=1535011&amp;lang=es_mx"><span aria-hidden="true" class="fa fa-language"></span>Español ‎(es_mx)‎</a></li><li><a title="Français ‎(fr)‎" href="https://mv1.mediacionvirtual.ucr.ac.cr/mod/resource/view.php?id=1535011&amp;lang=fr"><span aria-hidden="true" class="fa fa-language"></span>Français ‎(fr)‎</a></li><li><a title="Italiano ‎(it)‎" href="https://mv1.mediacionvirtual.ucr.ac.cr/mod/resource/view.php?id=1535011&amp;lang=it"><span aria-hidden="true" class="fa fa-language"></span>Italiano ‎(it)‎</a></li><li><a title="Nederlands ‎(nl)‎" href="https://mv1.mediacionvirtual.ucr.ac.cr/mod/resource/view.php?id=1535011&amp;lang=nl"><span aria-hidden="true" class="fa fa-language"></span>Nederlands ‎(nl)‎</a></li><li><a title="Português - Brasil ‎(pt_br)‎" href="https://mv1.mediacionvirtual.ucr.ac.cr/mod/resource/view.php?id=1535011&amp;lang=pt_br"><span aria-hidden="true" class="fa fa-language"></span>Português - Brasil ‎(pt_br)‎</a></li><li><a title="Русский ‎(ru)‎" href="https://mv1.mediacionvirtual.ucr.ac.cr/mod/resource/view.php?id=1535011&amp;lang=ru"><span aria-hidden="true" class="fa fa-language"></span>Русский ‎(ru)‎</a></li><li><a title="한국어 ‎(ko)‎" href="https://mv1.mediacionvirtual.ucr.ac.cr/mod/resource/view.php?id=1535011&amp;lang=ko"><span aria-hidden="true" class="fa fa-language"></span>한국어 ‎(ko)‎</a></li><li><a title="日本語 ‎(ja)‎" href="https://mv1.mediacionvirtual.ucr.ac.cr/mod/resource/view.php?id=1535011&amp;lang=ja"><span aria-hidden="true" class="fa fa-language"></span>日本語 ‎(ja)‎</a></li><li><a title="正體中文 ‎(zh_tw)‎" href="https://mv1.mediacionvirtual.ucr.ac.cr/mod/resource/view.php?id=1535011&amp;lang=zh_tw"><span aria-hidden="true" class="fa fa-language"></span>正體中文 ‎(zh_tw)‎</a></li><li><a title="简体中文 ‎(zh_cn)‎" href="https://mv1.mediacionvirtual.ucr.ac.cr/mod/resource/view.php?id=1535011&amp;lang=zh_cn"><span aria-hidden="true" class="fa fa-language"></span>简体中文 ‎(zh_cn)‎</a></li></ul></div></ul></div><div id="custom_menu_courses" class="custom_menu"><ul class="nav"><li class="dropdown"><a href="https://mv1.mediacionvirtual.ucr.ac.cr/mod/resource/view.php?id=1535011" class="dropdown-toggle" data-toggle="dropdown" title="Mis cursos recientes"><span aria-hidden="true" class="fa fa-briefcase"></span>Mis cursos recientes<span aria-hidden="true" class="fa fa-caret-right"></span></a><div class="dropdown-menu"><ul><li><a title="Mi Escritorio Virtual" href="https://mv1.mediacionvirtual.ucr.ac.cr/my/index.php"><span><span aria-hidden="true" class="fa fa-home"></span><span> Mi Escritorio Virtual</span></span></a></li><li><a title="III.S.2021.RRF.CI-0112.901" href="https://mv1.mediacionvirtual.ucr.ac.cr/course/view.php?id=24864"><span><span aria-hidden="true" class="fa fa-graduation-cap"></span>III - S - 2021 - RRF - Programación 1 - 901</span></a></li><li><a title="III.S.2021.RRF.OE-0218.901" href="https://mv1.mediacionvirtual.ucr.ac.cr/course/view.php?id=25027"><span><span aria-hidden="true" class="fa fa-graduation-cap"></span>III - S - 2021 - RRF - OE-0218 Taller de LESCO (inicial) - 901</span></a></li></ul></div></ul></div><div id="custom_menu" class="custom_menu"><ul class="nav"></ul></div><div id="custom_menu_activitystream" class="custom_menu"><ul class="nav"><li class="dropdown"><a href="https://mv1.mediacionvirtual.ucr.ac.cr/mod/resource/view.php?id=1535011" class="dropdown-toggle" data-toggle="dropdown" title="Este curso"><span aria-hidden="true" class="fa fa-book"></span>Este curso<span aria-hidden="true" class="fa fa-caret-right"></span></a><div class="dropdown-menu"><ul><li><a title="Calificaciones" href="https://mv1.mediacionvirtual.ucr.ac.cr/grade/report/index.php?id=24864"><span aria-hidden="true" class="icon fa fa-list-alt"></span>Calificaciones</a></li><li><a href="https://mv1.mediacionvirtual.ucr.ac.cr/mod/questionnaire/index.php?id=24864"><img class="icon icon" alt="" aria-hidden="true" src="https://mv1.mediacionvirtual.ucr.ac.cr/theme/image.php/essential/questionnaire/1646031602/icon" />Cuestionarios</a></li><li><a href="https://mv1.mediacionvirtual.ucr.ac.cr/mod/choice/index.php?id=24864"><img class="icon icon" alt="" aria-hidden="true" src="https://mv1.mediacionvirtual.ucr.ac.cr/theme/image.php/essential/choice/1646031602/icon" />Elecciones</a></li><li><a href="https://mv1.mediacionvirtual.ucr.ac.cr/course/resources.php?id=24864"><img class="icon icon" alt="" aria-hidden="true" src="https://mv1.mediacionvirtual.ucr.ac.cr/theme/image.php/essential/mod_page/1646031602/icon" />Recursos</a></li></ul></div></ul></div>                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<div id="page" class="container-fluid">
+    <div id="page-top-header" class="clearfix"><div id="page-navbar" class="clearfix row-fluid"><div class="breadcrumb-nav span9"><span class="accesshide" id="navbar-label">Ruta a la página</span><nav aria-labelledby="navbar-label"><ul class="breadcrumb style1"><li><span itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb"><a itemprop="url" href="https://mv1.mediacionvirtual.ucr.ac.cr/my/"><span itemprop="title">Mi Escritorio Virtual</span></a></span></li><li><span tabindex="0">Mis cursos</span></li><li><span itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb"><a itemprop="url" title="III - S - 2021 - RRF - Programación 1 - 901" href="https://mv1.mediacionvirtual.ucr.ac.cr/course/view.php?id=24864"><span itemprop="title">III.S.2021.RRF.CI-0112.901</span></a></span></li><li><span tabindex="0">Semana 2 - Expresiones y condicionales | Ciclos while y for | Javadoc</span></li><li><span itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb"><a itemprop="url" title="Archivo" aria-current="page" href="https://mv1.mediacionvirtual.ucr.ac.cr/mod/resource/view.php?id=1535011"><span itemprop="title">Ejemplo 3 - Enunciado Permutaciones y Combinaciones (Imagen HackerRank)</span></a></span></li></ul></nav></div><nav class="breadcrumb-button span3"></nav></div></div>    <!-- Start Main Regions -->
+    <div id="page-content" class="row-fluid">
+        <div id="main-and-pre" class="span12">
+            <div class="row-fluid">
+                <div id="content" class="span9"><section id="region-main"><div class="coursetitle"><div class="page-context-header"><div class="page-header-headings"><h1>III - S - 2021 - RRF - Programación 1 - 901</h1></div></div></div><div class="bor"></div><span class="notifications" id="user-notifications"></span><div role="main"><span id="maincontent"></span><div class="row-fluid"><div class="span8"><h2>Ejemplo 3 - Enunciado Permutaciones y Combinaciones (Imagen HackerRank)</h2></div><div class="span4 heading-rts"><a href="https://mv1.mediacionvirtual.ucr.ac.cr/course/view.php?id=24864&amp;sesskey=YUN4O2GoOz#section-3" class="btn btn-default" title="Regresar a: Semana 2 - Expr...">Regresar a: Semana 2 - Expr...<span aria-hidden="true" class="fa-fw fa fa-sign-in"></span></a></div></div><div class="resourcecontent resourceimg"><img title="Ejemplo 3 - Enunciado Permutaciones y Combinaciones (Imagen HackerRank)" class="resourceimage" src="https://mv1.mediacionvirtual.ucr.ac.cr/pluginfile.php/2010219/mod_resource/content/1/Screenshot%20at%202022-01-11%2021-12-37.png" alt="" /></div></div><div id="activitynavigation"><div class="m-t-2 m-b-1">
+<div class="row-fluid rtl-compatible">
+    <div class="span4">        <div class="pull-left">
+                <a href="https://mv1.mediacionvirtual.ucr.ac.cr/mod/resource/view.php?id=1532839&forceview=1" id="prev-activity-link" class="btn btn-link"  title="Video Clase Viernes 7 de enero" >&#x25C4; Video Clase Viernes 7 de enero</a>
+
+        </div>
+</div>
+    <div class="span4">        <div class="mdl-align">
+            <div class="urlselect">
+    <form method="post" action="https://mv1.mediacionvirtual.ucr.ac.cr/course/jumpto.php" class="form-inline" id="url_select_f621eeac235bd417">
+        <input type="hidden" name="sesskey" value="YUN4O2GoOz">
+            <label for="jump-to-activity" class="sr-only">
+                Ir a...
+            </label>
+        <select  id="jump-to-activity" class="custom-select urlselect" name="jump"
+                 >
+                    <option value="" selected>Ir a...</option>
+                    <option value="/mod/resource/view.php?id=1524334&amp;forceview=1" >Carta al estudiente</option>
+                    <option value="/mod/choice/view.php?id=1533103&amp;forceview=1" >Recibido conforme de la carta al estudiante</option>
+                    <option value="/mod/questionnaire/view.php?id=1540973&amp;forceview=1" >Selección de código secreto</option>
+                    <option value="/mod/url/view.php?id=1540128&amp;forceview=1" >Lista de Grupos Primer Proyecto</option>
+                    <option value="/mod/resource/view.php?id=1545157&amp;forceview=1" >Tarea 1 - Sokoban [14 de febrero]</option>
+                    <option value="/mod/resource/view.php?id=1546028&amp;forceview=1" >Tarea 1 - Sokoban [casos de prueba]</option>
+                    <option value="/mod/resource/view.php?id=1558625&amp;forceview=1" >Tarea 2 - Hoja de Cálculo [Enunciado - Miércoles 2 de marzo]</option>
+                    <option value="/mod/resource/view.php?id=1558624&amp;forceview=1" >Tarea 2 - Hoja de Cálculo [casos de prueba]</option>
+                    <option value="/mod/url/view.php?id=1530804&amp;forceview=1" >Resolución de problemas (resumen)</option>
+                    <option value="/mod/url/view.php?id=1530805&amp;forceview=1" >Análisis del problema</option>
+                    <option value="/mod/url/view.php?id=1530806&amp;forceview=1" >Diseño humano</option>
+                    <option value="/mod/url/view.php?id=1530808&amp;forceview=1" >Diseño procedimental 1: algoritmos (8 tipos de instrucciones)</option>
+                    <option value="/mod/resource/view.php?id=1531500&amp;forceview=1" >Ejemplo 1 - Enunciado (redondeo numeros)</option>
+                    <option value="/mod/resource/view.php?id=1531504&amp;forceview=1" >Ejemplo 1 - Diseño Pseudocodigo</option>
+                    <option value="/mod/resource/view.php?id=1532140&amp;forceview=1" >Ejemplo 1 - Redonde de números JAVA</option>
+                    <option value="/mod/resource/view.php?id=1532840&amp;forceview=1" >Ejemplo 2 - Enunciado Índice de masa corporal</option>
+                    <option value="/mod/resource/view.php?id=1534163&amp;forceview=1" >Ejemplo 2 - Diseño Pseudocódigo</option>
+                    <option value="/mod/resource/view.php?id=1534165&amp;forceview=1" >Ejemplo 2 - Índice de Masa Corporal (código JAVA)</option>
+                    <option value="/mod/resource/view.php?id=1531505&amp;forceview=1" >Ejemplo Extra - System.out.printf</option>
+                    <option value="/mod/resource/view.php?id=1534166&amp;forceview=1" >Ejemplo Extra - Estructura del If/Else, While, y For </option>
+                    <option value="/mod/url/view.php?id=1531507&amp;forceview=1" >Lista de banderas para dar formato usando printf</option>
+                    <option value="/mod/url/view.php?id=1532838&amp;forceview=1" >Expresiones Regulares</option>
+                    <option value="/mod/url/view.php?id=1534160&amp;forceview=1" >Sitio web para practicar EXPRESIONES REGULARES</option>
+                    <option value="/mod/resource/view.php?id=1531515&amp;forceview=1" >Video Clase Miercoles 5 de enero</option>
+                    <option value="/mod/resource/view.php?id=1532181&amp;forceview=1" >Video Clase Jueves 6 de enero </option>
+                    <option value="/mod/resource/view.php?id=1532839&amp;forceview=1" >Video Clase Viernes 7 de enero</option>
+                    <option value="/mod/resource/view.php?id=1535779&amp;forceview=1" >Ejemplo 3 - Diseño Pseudocódigo Permutaciones y Combinaciones</option>
+                    <option value="/mod/resource/view.php?id=1540530&amp;forceview=1" >Ejemplo 3 - Permutaciones y Combinaciones</option>
+                    <option value="/mod/resource/view.php?id=1537143&amp;forceview=1" >Ejemplo 4 - ImpuestoPropina (código JAVA)</option>
+                    <option value="/mod/url/view.php?id=1535791&amp;forceview=1" >Material de apoyo de Javadoc</option>
+                    <option value="/mod/resource/view.php?id=1534159&amp;forceview=1" >Video Clase Lunes 11 de enero</option>
+                    <option value="/mod/resource/view.php?id=1535780&amp;forceview=1" >Video Clase Miércoles 12 de enero [parte 1]</option>
+                    <option value="/mod/resource/view.php?id=1535781&amp;forceview=1" >Video Clase Miércoles 12 de enero [parte 2]</option>
+                    <option value="/mod/resource/view.php?id=1537212&amp;forceview=1" >Video Clase Jueves 13 de enero [parte 1]</option>
+                    <option value="/mod/resource/view.php?id=1537213&amp;forceview=1" >Video Clase Jueves 13 de enero [parte 2]</option>
+                    <option value="/mod/resource/view.php?id=1537214&amp;forceview=1" >Video Clase Vierners 14 de enero [parte 1]</option>
+                    <option value="/mod/resource/view.php?id=1537215&amp;forceview=1" >Video Clase Viernes 14 de enero [parte 2]</option>
+                    <option value="/mod/resource/view.php?id=1540523&amp;forceview=1" >Ejemplo 5 - Mediana Estadística [Enunciado]</option>
+                    <option value="/mod/resource/view.php?id=1540524&amp;forceview=1" >Ejemplo 5 - Mediana Estadística [Pseudocódigo]</option>
+                    <option value="/mod/resource/view.php?id=1540526&amp;forceview=1" >Ejemplo 5 - Mediana Estadística [Código JAVA]</option>
+                    <option value="/mod/resource/view.php?id=1540802&amp;forceview=1" >Ejemplo 6 - Números Felices [Enunciado]</option>
+                    <option value="/mod/resource/view.php?id=1540803&amp;forceview=1" >Ejemplo 6 - Números Felices [Pseudocódigo]</option>
+                    <option value="/mod/resource/view.php?id=1540807&amp;forceview=1" >Ejemplo 6 - Números Felices [Código Java]</option>
+                    <option value="/mod/resource/view.php?id=1540528&amp;forceview=1" >Ejemplo Extra -  Break &amp; Continue [Código Java]</option>
+                    <option value="/mod/resource/view.php?id=1540115&amp;forceview=1" >Video Clase Lunes 17 de enero</option>
+                    <option value="/mod/resource/view.php?id=1540117&amp;forceview=1" >Video Clase Martes 18 de enero [parte 1]</option>
+                    <option value="/mod/resource/view.php?id=1540118&amp;forceview=1" >Video Clase Martes 18 de enero [parte 2]</option>
+                    <option value="/mod/resource/view.php?id=1540121&amp;forceview=1" >Video Clase Miércoles 19 de enero [parte 1]</option>
+                    <option value="/mod/resource/view.php?id=1540123&amp;forceview=1" >Video Clase Miércoles 19 de enero [parte 2]</option>
+                    <option value="/mod/resource/view.php?id=1540534&amp;forceview=1" >Video Clase Jueves 20 de enero [parte 1]</option>
+                    <option value="/mod/resource/view.php?id=1540535&amp;forceview=1" >Video Clase Jueves 20 de enero [parte 2]</option>
+                    <option value="/mod/resource/view.php?id=1540804&amp;forceview=1" >Video Clase Viernes 21 de enero [parte 1]</option>
+                    <option value="/mod/resource/view.php?id=1540805&amp;forceview=1" >Video Clase Viernes 21 de enero [parte 2]</option>
+                    <option value="/mod/resource/view.php?id=1543026&amp;forceview=1" >Ejemplo 7 - Gato Solución 1 [Pseudocódigo]</option>
+                    <option value="/mod/resource/view.php?id=1543473&amp;forceview=1" >Ejemplo 7 -  Gato Solución 2 [Pseudocódigo]</option>
+                    <option value="/mod/resource/view.php?id=1543474&amp;forceview=1" >Video Clase Miércoles 26 de enero [parte 1]</option>
+                    <option value="/mod/resource/view.php?id=1543476&amp;forceview=1" >Video Clase Miércoles 26 de enero [parte 2]</option>
+                    <option value="/mod/resource/view.php?id=1544595&amp;forceview=1" >Video Clase Jueves 27 de enero [parte 1]</option>
+                    <option value="/mod/resource/view.php?id=1544597&amp;forceview=1" >Video Clase Jueves 27 de enero [parte 2]</option>
+                    <option value="/mod/resource/view.php?id=1547169&amp;forceview=1" >Ejemplo 8 - Bomberman [pseudocódigo]</option>
+                    <option value="/mod/resource/view.php?id=1547171&amp;forceview=1" >Ejemplo 8 - Bomberman [markdown]</option>
+                    <option value="/mod/resource/view.php?id=1547173&amp;forceview=1" >Ejemplo 8 - Bomberman [Java]</option>
+                    <option value="/mod/url/view.php?id=1546020&amp;forceview=1" >Sintaxis básica Markdown</option>
+                    <option value="/mod/url/view.php?id=1545877&amp;forceview=1" >Sitio web para previsualizar código MARKDOWN</option>
+                    <option value="/mod/url/view.php?id=1546012&amp;forceview=1" >Comandos GIT</option>
+                    <option value="/mod/resource/view.php?id=1545343&amp;forceview=1" >Video Clase Lunes 31 de enero</option>
+                    <option value="/mod/resource/view.php?id=1545966&amp;forceview=1" >Video Clase Martes 1 de febrero [parte 1]</option>
+                    <option value="/mod/resource/view.php?id=1545967&amp;forceview=1" >Video Clase Martes 1 de febrero [parte 2]</option>
+                    <option value="/mod/resource/view.php?id=1551198&amp;forceview=1" >Ejemplo 9 - Problema 8 Reinas Backtracking [Java]</option>
+                    <option value="/mod/resource/view.php?id=1551201&amp;forceview=1" >Ejemplo 9 - Recursividad ejemplos varios [Java]</option>
+                    <option value="/mod/resource/view.php?id=1553141&amp;forceview=1" >Ejemplo 10 - Calculadora de fracciones</option>
+                    <option value="/mod/resource/view.php?id=1553143&amp;forceview=1" >Ejemplo 10 - Calculadora de Fracciones (Calculadora.java)</option>
+                    <option value="/mod/resource/view.php?id=1553144&amp;forceview=1" >Ejemplo 10 - Calculadora de Fracciones (Fraction.java)</option>
+                    <option value="/mod/url/view.php?id=1553149&amp;forceview=1" >Video Clase - Lunes 14 de febrero</option>
+                    <option value="/mod/url/view.php?id=1553152&amp;forceview=1" >Video Clase - Martes 15 de febrero</option>
+                    <option value="/mod/url/view.php?id=1553153&amp;forceview=1" >Video Clase - Miércoles 16 de febrero [parte 1]</option>
+                    <option value="/mod/url/view.php?id=1553154&amp;forceview=1" >Video Clase - Miércoles 16 de febrero [parte 2]</option>
+                    <option value="/mod/url/view.php?id=1553155&amp;forceview=1" >Video Clase - Jueves 17 de febrero [parte 1]</option>
+                    <option value="/mod/url/view.php?id=1553158&amp;forceview=1" >Video Clase - Jueves 17 de febrero [parte 2]</option>
+                    <option value="/mod/url/view.php?id=1553918&amp;forceview=1" >Video Clase - Viernes 18 de febrero</option>
+                    <option value="/mod/resource/view.php?id=1556299&amp;forceview=1" >Ejemplo 11 - Estructura de datos [Controlador]</option>
+                    <option value="/mod/resource/view.php?id=1555549&amp;forceview=1" >Ejemplo 11 - Estructuras de datos [ArrayList-Mediana]</option>
+                    <option value="/mod/resource/view.php?id=1555550&amp;forceview=1" >Ejemplo 11 - Estructura de datos [Lista] </option>
+                    <option value="/mod/resource/view.php?id=1556298&amp;forceview=1" >Ejemplo 11 - Estructura de datos [Árbol Binario de Búsqueda] </option>
+                    <option value="/mod/url/view.php?id=1556287&amp;forceview=1" >Video Clase - Miércoles 23 de febrero [Parte 1]</option>
+                    <option value="/mod/url/view.php?id=1556289&amp;forceview=1" >Video Clase - Miércoles 23 de febrero [parte 2]</option>
+                    <option value="/mod/resource/view.php?id=1524150&amp;forceview=1" >¿Qué es hostigamiento sexual?</option>
+                    <option value="/mod/resource/view.php?id=1524152&amp;forceview=1" >REGLAMENTO DE LA UNIVERSIDAD DE COSTA RICA EN CONTRA DEL HOSTIGAMIENTO SEXUAL</option>
+                    <option value="/mod/resource/view.php?id=1524153&amp;forceview=1" >Artículos específicos del reglamento</option>
+        </select>
+            <noscript>
+                <input type="submit" class="btn btn-secondary" value="Ir">
+            </noscript>
+    </form>
+</div>
+
+        </div>
+</div>
+    <div class="span4">        <div class="pull-right">
+                <a href="https://mv1.mediacionvirtual.ucr.ac.cr/mod/resource/view.php?id=1535779&forceview=1" id="next-activity-link" class="btn btn-link"  title="Ejemplo 3 - Diseño Pseudocódigo Permutaciones y Combinaciones" >Ejemplo 3 - Diseño Pseudocódigo Permutaciones y Combinaciones &#x25BA;</a>
+
+        </div>
+</div>
+</div>
+</div></div><div class="row-fluid"><div class="span12 text-center footer-rts"><a href="https://mv1.mediacionvirtual.ucr.ac.cr/course/view.php?id=24864&amp;sesskey=YUN4O2GoOz#section-3" class="btn btn-default" title="Regresar a: Semana 2 - Expr...">Regresar a: Semana 2 - Expr...<span aria-hidden="true" class="fa-fw fa fa-sign-in"></span></a></div></div></section></div><aside id="block-region-side-post" class="span3 block-region" data-blockregion="side-post" data-droptarget="1"><a class="skip skip-block" id="fsb-1" href="#sb-1">Omitir Accesibilidad</a><div id="inst128" class="block_accessibility block" role="complementary" data-block="accessibility" data-instanceid="128" aria-labelledby="instance-128-header" data-dockable="1"><div class="header"><div class="title"><div class="block_action"></div><span aria-hidden="true" class="fa fa-navicon"></span><h2 id="instance-128-header">Accesibilidad</h2></div></div><div class="content"><div id="accessibility_controls" class="content"><ul id="block_accessibility_textresize" class="button_row"><li class="access-button"><a title="Disminuir Tamaño del Texto" id="block_accessibility_dec" href="https://mv1.mediacionvirtual.ucr.ac.cr/blocks/accessibility/changesize.php?redirect=https%3A%2F%2Fmv1.mediacionvirtual.ucr.ac.cr%2Fmod%2Fresource%2Fview.php%3Fid%3D1535011&amp;op=dec">A-</a></li><li class="access-button"><a id="block_accessibility_reset" title="Restablecer Tamaño del Texto (Borra Configuración Guardada)" href="https://mv1.mediacionvirtual.ucr.ac.cr/blocks/accessibility/changesize.php?redirect=https%3A%2F%2Fmv1.mediacionvirtual.ucr.ac.cr%2Fmod%2Fresource%2Fview.php%3Fid%3D1535011&amp;op=reset" class="disabled">A</a></li><li class="access-button"><a title="Aumentar Tamaño del Texto" id="block_accessibility_inc" href="https://mv1.mediacionvirtual.ucr.ac.cr/blocks/accessibility/changesize.php?redirect=https%3A%2F%2Fmv1.mediacionvirtual.ucr.ac.cr%2Fmod%2Fresource%2Fview.php%3Fid%3D1535011&amp;op=inc">A+</a></li><li class="access-button"><a title="Guardar Configuración" id="block_accessibility_save" href="https://mv1.mediacionvirtual.ucr.ac.cr/blocks/accessibility/database.php?redirect=https%3A%2F%2Fmv1.mediacionvirtual.ucr.ac.cr%2Fmod%2Fresource%2Fview.php%3Fid%3D1535011&amp;op=save&amp;size=1&amp;scheme=1">&nbsp</a></li></ul><ul id="block_accessibility_changecolour"><li class="access-button"><a title="Esquema de Colores por Defecto (Borra Configuraciones Guardadas)" id="block_accessibility_colour1" href="https://mv1.mediacionvirtual.ucr.ac.cr/blocks/accessibility/changecolour.php?redirect=https%3A%2F%2Fmv1.mediacionvirtual.ucr.ac.cr%2Fmod%2Fresource%2Fview.php%3Fid%3D1535011&amp;scheme=1" class="disabled">R</a></li><li class="access-button"><a title="Contraste disminuído 1" id="block_accessibility_colour2" href="https://mv1.mediacionvirtual.ucr.ac.cr/blocks/accessibility/changecolour.php?redirect=https%3A%2F%2Fmv1.mediacionvirtual.ucr.ac.cr%2Fmod%2Fresource%2Fview.php%3Fid%3D1535011&amp;scheme=2">A</a></li><li class="access-button"><a title="Contraste disminuído 2" id="block_accessibility_colour3" href="https://mv1.mediacionvirtual.ucr.ac.cr/blocks/accessibility/changecolour.php?redirect=https%3A%2F%2Fmv1.mediacionvirtual.ucr.ac.cr%2Fmod%2Fresource%2Fview.php%3Fid%3D1535011&amp;scheme=3">A</a></li><li class="access-button"><a title="Alto Contraste" id="block_accessibility_colour4" href="https://mv1.mediacionvirtual.ucr.ac.cr/blocks/accessibility/changecolour.php?redirect=https%3A%2F%2Fmv1.mediacionvirtual.ucr.ac.cr%2Fmod%2Fresource%2Fview.php%3Fid%3D1535011&amp;scheme=4">A</a></li></ul><div id="block_accessibility_message" class="clearfix"></div></div><span id="loader-icon"></span></div></div><span class="skip-block-to" id="sb-1"></span><a class="skip skip-block" id="fsb-2" href="#sb-2">Omitir PREGUNTAS FRECUENTES</a><div id="inst303577" class="block_html block" role="complementary" data-block="html" data-instanceid="303577" aria-labelledby="instance-303577-header" data-dockable="1"><div class="header"><div class="title"><div class="block_action"></div><span aria-hidden="true" class="fa fa-list-alt"></span><h2 id="instance-303577-header">PREGUNTAS FRECUENTES</h2></div></div><div class="content"><div class="no-overflow"><p style="text-align: center;">
+    <a href="https://mv1.mediacionvirtual.ucr.ac.cr/course/view.php?id=16114" target="_blank"><img src="https://mv1.mediacionvirtual.ucr.ac.cr/pluginfile.php/1146582/block_html/content/Preguntas%20Frecuentes.png" alt="Acceda a las preguntas frecuentes aquí" class="atto_image_button_text-bottom" width="250" height="100">
+    </a>
+    <br <="" p=""></p></div></div></div><span class="skip-block-to" id="sb-2"></span><a class="skip skip-block" id="fsb-3" href="#sb-3">Omitir Administración</a><div id="inst5" class="block_settings block" role="navigation" data-block="settings" data-instanceid="5" aria-labelledby="instance-5-header" data-dockable="1"><div class="header"><div class="title"><div class="block_action"></div><span aria-hidden="true" class="fa fa-cogs"></span><h2 id="instance-5-header">Administración</h2></div></div><div class="content"><div id="settingsnav" class="box block_tree_box"><ul class="block_tree list" role="tree" data-ajax-loader="block_navigation/site_admin_loader"><li class="type_setting depth_1 contains_branch" tabindex="-1" aria-labelledby="label_1_1"><p class="tree_item root_node tree_item branch" role="treeitem" aria-expanded="true" aria-owns="random621eeac235bd42_group"><span tabindex="0">Administración del módulo archivo</span></p><ul id="random621eeac235bd42_group" role="group"><li class="type_setting depth_2 item_with_icon" tabindex="-1" aria-labelledby="label_2_1"><p class="tree_item hasicon tree_item leaf" role="treeitem"><a href="https://mv1.mediacionvirtual.ucr.ac.cr/admin/roles/permissions.php?contextid=2010219"><i class="icon fa fa-angle-right fa-fw navicon" aria-hidden="true"  ></i>Permisos</a></p></li>
+<li class="type_setting depth_2 item_with_icon" tabindex="-1" aria-labelledby="label_2_2"><p class="tree_item hasicon tree_item leaf" role="treeitem"><a href="https://mv1.mediacionvirtual.ucr.ac.cr/report/log/index.php?chooselog=1&amp;id=24864&amp;modid=1535011"><i class="icon fa fa-angle-right fa-fw navicon" aria-hidden="true"  ></i>Bitácoras</a></p></li></ul></li>
+<li class="type_course depth_1 contains_branch" tabindex="-1" aria-labelledby="label_1_2"><hr /><p class="tree_item root_node tree_item branch" role="treeitem" aria-expanded="false" aria-owns="random621eeac235bd45_group"><span tabindex="0">Administración del curso</span></p><ul id="random621eeac235bd45_group" role="group" aria-hidden="true"><li class="type_container depth_2 contains_branch" tabindex="-1" aria-labelledby="label_2_1"><p class="tree_item tree_item branch" role="treeitem" aria-expanded="false" aria-owns="random621eeac235bd46_group"><span tabindex="0">Usuarios</span></p><ul id="random621eeac235bd46_group" role="group" aria-hidden="true"><li class="type_setting depth_3 item_with_icon" tabindex="-1" aria-labelledby="label_3_1"><p class="tree_item hasicon tree_item leaf" role="treeitem"><a href="https://mv1.mediacionvirtual.ucr.ac.cr/admin/roles/permissions.php?contextid=1998398"><i class="icon fa fa-angle-right fa-fw navicon" aria-hidden="true"  ></i>Permisos</a></p></li></ul></li>
+<li class="type_container depth_2 contains_branch" tabindex="-1" aria-labelledby="label_2_2"><p class="tree_item tree_item branch" role="treeitem" aria-expanded="false" aria-owns="random621eeac235bd48_group"><span tabindex="0">Reportes</span></p><ul id="random621eeac235bd48_group" role="group" aria-hidden="true"><li class="type_setting depth_3 item_with_icon" tabindex="-1" aria-labelledby="label_3_1"><p class="tree_item hasicon tree_item leaf" role="treeitem"><a href="https://mv1.mediacionvirtual.ucr.ac.cr/report/log/index.php?id=24864"><i class="icon fa fa-area-chart fa-fw navicon" aria-hidden="true"  ></i>Bitácoras</a></p></li>
+<li class="type_setting depth_3 item_with_icon" tabindex="-1" aria-labelledby="label_3_2"><p class="tree_item hasicon tree_item leaf" role="treeitem"><a href="https://mv1.mediacionvirtual.ucr.ac.cr/report/loglive/index.php?id=24864"><i class="icon fa fa-area-chart fa-fw navicon" aria-hidden="true"  ></i>Bitácoras en vivo</a></p></li>
+<li class="type_setting depth_3 item_with_icon" tabindex="-1" aria-labelledby="label_3_3"><p class="tree_item hasicon tree_item leaf" role="treeitem"><a href="https://mv1.mediacionvirtual.ucr.ac.cr/report/outline/index.php?id=24864"><i class="icon fa fa-area-chart fa-fw navicon" aria-hidden="true"  ></i>Reporte de Actividad</a></p></li></ul></li></ul></li></ul></div></div></div><span class="skip-block-to" id="sb-3"></span></aside>            </div>
+                    </div>
+    </div>
+    <!-- End Main Regions -->
+</div>
+
+    <footer role="contentinfo" id="page-footer">
+        <div class="container-fluid">
+            <div class="footerlinks row-fluid">
+                <span class="helplink"><a href="https://docs.moodle.org/35/es/mod/resource/view"><i class="icon fa fa-info-circle fa-fw iconhelp icon-pre" aria-hidden="true"  ></i>Moodle Docs para esta página</a></span>
+                                <div class="footnote span12"><div class="row">
+    <div class="span5" style="text-align: center;">
+        <a href="https://www.ucr.ac.cr" target="_blank">
+            <img src="/theme/essential/pix/metics/firma-horizontal-dos-lineas-blanco.png" alt="Logo de UCR" style="height: 80px;">
+        </a>
+        <a href="http://vd.ucr.ac.cr/" target="_blank">
+            <img src="/theme/essential/pix/metics/firma-vd-blanco-horizontal.png" alt="Logo de VD" style="height: 50px;">
+        </a>
+        <a href="https://metics.ucr.ac.cr/" target="_blank">
+            <img src="/theme/essential/pix/metics/firma-metics-blanco-horizontal.png" alt="Logo de METICS" style="height: 35px;">
+        </a>
+    </div>
+    <div class="span3" style="text-align: left;"><br><p>Para solicitar ayuda puede escribir:<br>Consultas docentes a consultas.metics@ucr.ac.cr<br>Consultas técnicas a soporte.metics@ucr.ac.cr<br>Dirección a unidad.metics@ucr.ac.cr<br></p></div>
+</div></div>            </div>
+            <div class="footerperformance row-fluid">
+                <a href="https://download.moodle.org/mobile?version=2018051716&amp;lang=es_mx&amp;iosappid=633359593&amp;androidappid=com.moodle.moodlemobile">Obtener la App Mobile</a>            </div>
+        </div>
+    </footer>
+    <a href="#top" class="back-to-top" aria-label="Regresar a la parte superior">
+        <span aria-hidden="true" class="fa fa-angle-up "></span></a>
+<script type="text/javascript">
+//<![CDATA[
+var require = {
+    baseUrl : 'https://mv1.mediacionvirtual.ucr.ac.cr/lib/requirejs.php/1646031602/',
+    // We only support AMD modules with an explicit define() statement.
+    enforceDefine: true,
+    skipDataMain: true,
+    waitSeconds : 0,
+
+    paths: {
+        jquery: 'https://mv1.mediacionvirtual.ucr.ac.cr/lib/javascript.php/1646031602/lib/jquery/jquery-3.2.1.min',
+        jqueryui: 'https://mv1.mediacionvirtual.ucr.ac.cr/lib/javascript.php/1646031602/lib/jquery/ui-1.12.1/jquery-ui.min',
+        jqueryprivate: 'https://mv1.mediacionvirtual.ucr.ac.cr/lib/javascript.php/1646031602/lib/requirejs/jquery-private'
+    },
+
+    // Custom jquery config map.
+    map: {
+      // '*' means all modules will get 'jqueryprivate'
+      // for their 'jquery' dependency.
+      '*': { jquery: 'jqueryprivate' },
+      // Stub module for 'process'. This is a workaround for a bug in MathJax (see MDL-60458).
+      '*': { process: 'core/first' },
+
+      // 'jquery-private' wants the real jQuery module
+      // though. If this line was not here, there would
+      // be an unresolvable cyclic dependency.
+      jqueryprivate: { jquery: 'jquery' }
+    }
+};
+
+//]]>
+</script>
+<script type="text/javascript" src="https://mv1.mediacionvirtual.ucr.ac.cr/lib/javascript.php/1646031602/lib/requirejs/require.min.js"></script>
+<script type="text/javascript">
+//<![CDATA[
+M.util.js_pending("core/first");require(['core/first'], function() {
+;
+require(["media_videojs/loader"], function(loader) {
+    loader.setUp(function(videojs) {
+        videojs.options.flash.swf = "https://mv1.mediacionvirtual.ucr.ac.cr/media/player/videojs/videojs/video-js.swf";
+videojs.addLanguage("es",{
+ "Play": "Reproducción",
+ "Play Video": "Reproducción Vídeo",
+ "Pause": "Pausa",
+ "Current Time": "Tiempo reproducido",
+ "Duration Time": "Duración total",
+ "Remaining Time": "Tiempo restante",
+ "Stream Type": "Tipo de secuencia",
+ "LIVE": "DIRECTO",
+ "Loaded": "Cargado",
+ "Progress": "Progreso",
+ "Fullscreen": "Pantalla completa",
+ "Non-Fullscreen": "Pantalla no completa",
+ "Mute": "Silenciar",
+ "Unmute": "No silenciado",
+ "Playback Rate": "Velocidad de reproducción",
+ "Subtitles": "Subtítulos",
+ "subtitles off": "Subtítulos desactivados",
+ "Captions": "Subtítulos especiales",
+ "captions off": "Subtítulos especiales desactivados",
+ "Chapters": "Capítulos",
+ "You aborted the media playback": "Ha interrumpido la reproducción del vídeo.",
+ "A network error caused the media download to fail part-way.": "Un error de red ha interrumpido la descarga del vídeo.",
+ "The media could not be loaded, either because the server or network failed or because the format is not supported.": "No se ha podido cargar el vídeo debido a un fallo de red o del servidor o porque el formato es incompatible.",
+ "The media playback was aborted due to a corruption problem or because the media used features your browser did not support.": "La reproducción de vídeo se ha interrumpido por un problema de corrupción de datos o porque el vídeo precisa funciones que su navegador no ofrece.",
+ "No compatible source was found for this media.": "No se ha encontrado ninguna fuente compatible con este vídeo."
+});
+
+    });
+});;
+M.util.js_pending('theme_essential/header');
+require(['theme_essential/header'], function(amd) {
+    amd.init();
+    M.util.js_complete('theme_essential/header');
+});;
+M.util.js_pending('theme_essential/footer');
+require(['theme_essential/footer'], function(amd) {
+    amd.init();
+    M.util.js_complete('theme_essential/footer');
+});;
+M.util.js_pending('theme_essential/navbar');
+require(['theme_essential/navbar'], function(amd) {
+    amd.init({"oldnavbar":"1"});
+    M.util.js_complete('theme_essential/navbar');
+});;
+M.util.js_pending('theme_essential/affix');
+require(['theme_essential/affix'], function(amd) {
+    amd.init();
+    M.util.js_complete('theme_essential/affix');
+});;
+M.util.js_pending('theme_essential/jBreadCrumb');
+require(['theme_essential/jBreadCrumb'], function(amd) {
+    amd.init();
+    M.util.js_complete('theme_essential/jBreadCrumb');
+});;
+M.util.js_pending('theme_essential/fitvids');
+require(['theme_essential/fitvids'], function(amd) {
+    amd.init();
+    M.util.js_complete('theme_essential/fitvids');
+});;
+
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-36046558-1', {'siteSpeedSampleRate': 50});
+    ga('send', {'hitType' : 'pageview',
+                'page' : '/%C3%81rea+de+Ingenier%C3%ADa/Facultad+de+Ingenier%C3%ADa/Escuela+de+Ciencias+de+la+Computaci%C3%B3n+e+Inform%C3%A1tica/III+-+S+-+2021+-+RRF+-+Programaci%C3%B3n+1+-+901/resource/Ejemplo+3+-+Enunciado+Permutaciones+y+Combinaciones+%28Imagen+HackerRank%29',
+                'title' : 'III - S - 2021 - RRF - Programación 1 - 901'
+                });
+;
+M.util.js_pending('block_settings/settingsblock');
+require(['block_settings/settingsblock'], function(amd) {
+    amd.init("5", null);
+    M.util.js_complete('block_settings/settingsblock');
+});;
+
+require(['core/yui'], function(Y) {
+    M.util.init_skiplink(Y);
+});
+;
+
+require(['jquery', 'message_popup/message_popover_controller'], function($, controller) {
+    var container = $('#nav-message-popover-container');
+    var controller = new controller(container);
+    controller.registerEventListeners();
+    controller.registerListNavigationEventListeners();
+});
+;
+
+require(['jquery', 'message_popup/notification_popover_controller'], function($, controller) {
+    var container = $('#nav-notification-popover-container');
+    var controller = new controller(container);
+    controller.registerEventListeners();
+    controller.registerListNavigationEventListeners();
+});
+;
+
+require(['core/yui'], function(Y) {
+    Y.use('moodle-core-actionmenu', function() {
+        M.core.actionmenu.init();
+    });
+});
+;
+
+        require(['jquery'], function($) {
+            $('#jump-to-activity').change(function() {
+                if (!$(this).val()) {
+                    return false;
+                }
+                $('#url_select_f621eeac235bd417').submit();
+            });
+        });
+    ;
+M.util.js_pending('core/log');
+require(['core/log'], function(amd) {
+    amd.setConfig({"level":"warn"});
+    M.util.js_complete('core/log');
+});M.util.js_complete("core/first");
+});
+//]]>
+</script>
+<script type="text/javascript" src="https://mv1.mediacionvirtual.ucr.ac.cr/theme/javascript.php/essential/1646031602/footer"></script>
+<script type="text/javascript">
+//<![CDATA[
+M.str = {"moodle":{"lastmodified":"\u00daltima modificaci\u00f3n","name":"Nombre","error":"Error","info":"Informaci\u00f3n","yes":"S\u00ed","no":"No","cancel":"Cancelar","morehelp":"M\u00e1s ayuda","loadinghelp":"Cargando...","confirm":"Confirmar","areyousure":"\u00bfEst\u00e1 Usted seguro?","closebuttontitle":"Cerrar","unknownerror":"Error desconocido"},"repository":{"type":"Tipo","size":"Tama\u00f1o","invalidjson":"Cadena JSON no v\u00e1lida","nofilesattached":"No se han adjuntado archivos","filepicker":"Selector de archivos","logout":"Salir","nofilesavailable":"No hay archivos disponibles","norepositoriesavailable":"Lo sentimos, ninguno de sus repositorios actuales puede devolver archivos en el formato solicitado.","fileexistsdialogheader":"El archivo existe","fileexistsdialog_editor":"Un archivo con ese nombre ha sido anexado al texto que Usted est\u00e1 editando","fileexistsdialog_filemanager":"Ya ha sido anexado un archivo con ese nombre","renameto":"Cambiar el nombre a \"{$a}\"","referencesexist":"Existen {$a} archivos de alias\/atajos que emplean este archivo como su or\u00edgen","select":"Seleccionar"},"admin":{"confirmdeletecomments":"Est\u00e1 a punto de eliminar comentarios, \u00bfest\u00e1 seguro?","confirmation":"Confirmaci\u00f3n"},"block":{"addtodock":"Mover a la orilla (dock)","undockitem":"Des-orillar este item","dockblock":"Orillar bloque {$a}","undockblock":"Desacoplar bloque {$a}","undockall":"Des-orillar todo","hidedockpanel":"Esconder el panel desacoplado","hidepanel":"Ocultar panel"},"langconfig":{"thisdirectionvertical":"btt"},"block_accessibility":{"saved":"Configuraci\u00f3n Guardada","jsnosave":"Error al guardar configuraciones","reset":"Configuraci\u00f3n borrada","jsnosizereset":"Error al restablecer tama\u00f1o del texto","jsnocolourreset":"Error al restablecer esquema de colores","jsnosize":"Error al cambiar tama\u00f1o","jsnocolour":"Error al cambiar esquema de colores","jsnotloggedin":"\u00a1Error! Por favor, revise si Usted est\u00e1 ingresado en el sistema o contacte a su administrador","launchtoolbar":"Desplegar ATbar (barra AT)"}};
+//]]>
+</script>
+<script type="text/javascript">
+//<![CDATA[
+(function() {Y.use("moodle-filter_mathjaxloader-loader",function() {M.filter_mathjaxloader.configure({"mathjaxconfig":"\n\nMathJax.Hub.Config({\n    TeX: {\n        extensions: [\"AMSmath.js\",\"AMSsymbols.js\",\"color.js\",\"mhchem.js\",\"noErrors.js\",\"noUndefined.js\"]\n    },\n    config: [\"Accessible.js\", \"Safe.js\"],\n    errorSettings: { message: [\"!\"] },\n    skipStartupTypeset: true,\n    messageStyle: \"none\"\n});\n\n","lang":"es"});
+});
+Y.use("moodle-core-dock-loader",function() {M.core.dock.loader.initLoader();
+});
+ M.util.js_pending('random621eeac235bd41'); Y.use('block_accessibility', function(Y) { M.block_accessibility.init(Y, false, "128");  M.util.js_complete('random621eeac235bd41'); });
+M.util.help_popups.setup(Y);
+Y.use("moodle-core-popuphelp",function() {M.core.init_popuphelp();
+});
+M.util.init_block_hider(Y, {"id":"inst128","title":"Accesibilidad","preference":"block128hidden","tooltipVisible":"Ocultar bloque Accesibilidad","tooltipHidden":"Mostrar bloque Accesibilidad"});
+M.util.init_block_hider(Y, {"id":"inst303577","title":"PREGUNTAS FRECUENTES","preference":"block303577hidden","tooltipVisible":"Ocultar bloque PREGUNTAS FRECUENTES","tooltipHidden":"Mostrar bloque PREGUNTAS FRECUENTES"});
+M.util.init_block_hider(Y, {"id":"inst5","title":"Administraci\u00f3n","preference":"block5hidden","tooltipVisible":"Ocultar bloque Administraci\u00f3n","tooltipHidden":"Mostrar bloque Administraci\u00f3n"});
+ M.util.js_pending('random621eeac235bd421'); Y.on('domready', function() { M.util.js_complete("init");  M.util.js_complete('random621eeac235bd421'); });
+})();
+//]]>
+</script>
+</body>
+</html>
+<!-- Essential theme version: 2018051905 is developed by Gareth J Barnard: about.me/gjbarnard -->

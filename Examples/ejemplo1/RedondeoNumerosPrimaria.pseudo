@@ -1,0 +1,28 @@
+procedure redondearDecimales do
+  while thereAreNumbers() do
+    set numero := leerValor()
+    for set decimales := 0 hasta decimales 8 do
+      set redondeado := roundANumber(numero, decimales)
+      printAnswer(numero, decimales, redondeado)
+    end
+  end  
+end procedure
+  
+procedure roundANumber(numeroOriginal, numeroDecimales) do
+  set ultimoDecimal := parteEntera(numeroOriginal * 
+    (10^(numeroDecimales+1))) % 10
+  set numeroRedondeado
+  if ultimoDecimal > 4 do
+    numeroRedondeado := (parteEntera(numeroOriginal * (10^numeroDecimales)) + 1)
+      / 10^numeroDecimales
+  else do
+    numeroRedondeado := (parteEntera(numeroOriginal * (10^numeroDecimales)))
+      / 10^numeroDecimales
+  end if else
+  return numeroRedondeado
+end procedure
+
+procedure printAnswer(numeroOriginal, numeroDecimales, numeroRedondeado) do
+  print "El numero " numeroOriginal " redondeado a " numeroDecimales 
+    " decimales es = " numeroRedondeado
+end procedure

@@ -1,0 +1,92 @@
+La rotación de personal es el cambio de empleados en una organización. Ocurre 
+cuando los empleados renuncian o son despedidos, y sus funciones son delegadas 
+por personas que las sustituyen. Una alta rotación de personal en una empresa es 
+un mal signo, pues los empleados están disconformes. Además es negativo para la 
+empresa, pues cada rotación implica contratiempos mientras el nuevo personal 
+adquiere la cultura y conocimiento para asumir las funciones. Es sabido que en 
+las empresas de tecnología, la rotación de personal es muy alta, en especial 
+porque en este sector hay mucha demanda y menor oferta. Los empleados entonces 
+rotan entre empresas buscando mejores retribuciones salariales.
+
+El patrón de una empresa de tecnología quiso mostrar los competitivos salarios 
+que ofrece a sus empleados. El patrón publicó en el correo organizacional 
+algunos estadísticos, como el promedio de salario. Sin embargo, los empleados 
+empezaron a hablar entre ellos y llegaron a la conclusión de que ninguno de 
+ellos alcanzaban ese salario. Ellos se sintieron defraudados porque que el 
+empleador mintió con el fin de hacer parecer los indicadores mejores de lo que 
+son para que los empleados se sintieran orgullosos de su empresa y no rotaran.
+
+Sin embargo, el empleador no mintió. Él reportó el promedio real de salarios. 
+La empresa tiene en total 67 empleados distribuidos de la siguiente forma. Hay 
+50 desarrolladores "junior", normalmente con el título de bachiller, que reciben 
+un salario inicial de 2000 dólares mensuales. Cada quien está asignado a uno de 
+los 10 proyectos activos de la empresa. El coordinador de cada proyecto recibe 
+una retribución adicional, y por tanto, un salario de 2500 dólares. Los 
+coordinadores reportan a los dos líderes técnicos, quienes son los que negocian 
+con los clientes y reciben un salario de $5000 mensuales por su experiencia. 
+Los gerentes de administración y recursos humanos reciben $7500 cada uno, el 
+gerente técnico $11000, el subgerente general $15000 y finalmente el dueño de la 
+empresa $25000.
+
+El dueño no publicó el desglose anterior, sino el promedio de 3000 dólares por 
+empleado. La conmoción empezó cuando los desarrolladores júnior discutieron 
+entre ellos su salario y luego con los líderes de proyecto, quienes tampoco 
+alcanzaban ese promedio, y juntos conforman el 90% de la fuerza laboral de la 
+empresa. Naturalmente ellos se sintieron engañados. Sin embargo, el dueño no 
+mintió en los datos, pero sí falló en usar el estadístico adecuado. Ciertamente 
+el promedio es el estadístico más popular y comprendido por la gente, pero se 
+afecta sensiblemente por los valores extremos. Un estadístico que no sufre de 
+este problema es la mediana. El segundo caso de prueba pide calcular la mediana 
+para esta empresa.
+
+La mediana es el valor del centro de un conjunto ordenado de datos, de tal forma 
+que 50% de los casos son menores o iguales a la mediana y 50% de los datos son 
+mayores o iguales a la mediana. Por ejemplo, un profesor realizó un quiz a sus 
+12 estudiantes, quienes obtuvieron las siguientes calificaciones.
+
+Ejemplo de entrada:
+
+12
+
+95
+100
+0
+90
+85
+80
+5
+90
+95
+100
+0
+85
+
+El profesor calculó rápidamente el promedio (68.75) e infirió que sus 
+estudiantes no estaban comprendiendo el tema y estaba decidido a explicarlo de 
+nuevo. Sin embargo, notó que algo andaba mal, pues la mayoría de las notas eran 
+altas. Decidió entonces calcular la mediana como sigue. Primero ordenar todos 
+los elementos de menor a mayor (o viceversa):
+
+0 	1 	2 	3 	4 	5 	6 	7 	8 	9 	10 	  11
+0 	0 	5 	80 	85 	85 	90 	90 	95 	95 	100 	100
+
+La mediana sería el valor que se encuentra en el centro, pero como el número de 
+elementos es par (N=12) el centro se encuentra en medio de los valores con 
+posición 5 (N=12/2-1) y posición 6 (N=12/2). Por tanto se promedian estos dos 
+valores:
+
+Median = (85 + 90) / 2 = 87.5
+
+La mediana (87.5) provee un mejor indicador del grado de conocimiento de los 
+estudiantes sobre la materia, que el promedio (68.75) que se afecta por valores 
+extremos. El profesor entonces decidió llamar a los tres estudiantes en 
+problemas a consulta y continuar el temario normal del curso.
+
+Ejemplo de salida:
+
+87.50
+
+Dado que el cálculo de la mediana es un proceso tedioso, y que las hojas de 
+cálculo están limitadas a grandes conjuntos de datos, se quiere un programa que 
+lea valores reales de la entrada estándar e imprima la mediana. La primera línea 
+en la entrada indica la cantidad de valores a leer.

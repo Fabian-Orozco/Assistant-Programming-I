@@ -1,0 +1,143 @@
+class Solution:
+
+  // atributos
+  Scanner reader = null
+  Laberinto laberinto = null
+  // ------------------------------------------------------
+
+  procedure main:
+  Solution solution as a new object
+  solution.run()
+  end procedure
+  
+  // ------------------------------------------------------
+  
+  procedure run:
+  this.laberinto = new Laberinto()
+  this.reader = new Scanner(System.in)
+
+  laberinto.leer(this.reader)
+
+  if (encontrarCamino()) {
+    laberinto.imprimir()
+  } else {
+    print("No solution path")
+  }
+  end procedure
+
+  // ------------------------------------------------------
+
+end class
+  // ---------------------------------------------------------
+
+class Laberinto:
+
+  // atributos
+  char laberinto[][] : matriz
+
+  // A
+  int filaInicial
+  int columnaInicial
+
+  // métodos
+  // ------------------------------------------------------
+
+  procedure leer(Scanner reader):
+    declare filas = reader.nextInt()
+    declare columnas = reader.nextInt()
+
+    reader.nextLine()
+    reader.nextLine()
+
+    reader.useDelimiter("")
+
+    for (fila = 0 to laberinto.length) do
+      for (columna = 0 to laberinto[fila].length) do
+        laberinto[fila][columna] = reader.next().charAt(0)
+        if (laberinto[fila][columna] == 'A') {
+          this.filaInicial = fila
+          this.columnaInicial = columna
+        }
+      end
+        reader.nextLine()
+    end
+  end procedure
+
+  // ------------------------------------------------------
+  procedure imprimir():
+
+  for (fila = 0 to laberinto.length) do
+    for (columna = 0 to laberinto[fila].length) do
+      print(laberinto[fila][columna]) // imprimir valor
+    end for
+      printline // salto de linea
+  end for
+  end procedure
+  // ------------------------------------------------------
+  
+  procedure boolean encontrarCamino():
+    return avanzar(this.filaInicial, this.columnaInicial)
+  end procedure
+  // ------------------------------------------------------
+  
+  // metodo recursivo que verifica las celdas adyacentes
+  // primero coloca el '.'
+  procedure boolean avanzar(fila, columna):
+    if laberinto[fila][columna] == " " do 
+      laberinto[fila][columna] = '.'
+    end
+
+    if (verifiqueCasilla(fila - 1, columna) )  // norte
+      do 
+        return true
+      end
+    if (verifiqueCasilla(fila, columna + 1) ) // este
+      do 
+        return true
+      end
+    if (verifiqueCasilla(fila + 1, columna) ) // sur
+      do 
+        return true
+      end
+    if (verifiqueCasilla(fila, columna - 1) ) // oeste
+      do 
+        return true
+      end
+    
+    this.laberinto[fila][columna] = ' '
+    return false
+  end procedure
+  // ------------------------------------------------------
+
+  // verifica la casilla para saber si está en 'B', si se avanza o si para.
+  procedure verifiqueCasilla(fila, columna):
+    switch( darValor(fila, columna) ) do
+      case "B": return true
+      case "-": return false
+      case "|": return false
+      case ".": return false
+      case "A": return false
+      case " ": return avanzar(fila, columna)
+      default: return false
+    end
+
+  end procedure
+
+  // ------------------------------------------------------
+
+  // para saber si esta dentro o fuera de la matriz
+  procedure darValor(fila, columna):
+  // si el valor esta dentro de la matriz
+  if (fila >= 0 && fila < laberinto.length) do 
+    if (columna >= 0 && < laberinto[fila].length) do 
+      // retorne dicho valor
+      return this.laberinto[fila][columna]
+    end
+  end
+  return '-'
+  end procedure
+
+  // ------------------------------------------------------
+  end class
+
+end class

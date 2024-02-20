@@ -1,0 +1,2 @@
+C 50.0 Atun 100.0 Frijoles 50.0 Helados -100.0 Leche -100.0
+S Atun 100.0 Frijoles 50.0 Helados 100.0 Leche 100.0 Huevos 75.0 Pan 25.0

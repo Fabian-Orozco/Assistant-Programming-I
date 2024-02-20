@@ -1,0 +1,56 @@
+1. Leer un valor
+2. Imprimir un valor
+3. Crear una varialber con un valor
+4. Cambiarle el valor a una variable
+5. Condicionar una instrucción
+6. Repetir una instrucción
+7. Hacer/ejecutar una subtarea
+8. Definir una subtarea
+
+Redondeo números decimales de primaria
+
+Se quiere realizar un programa que le permita a los niños de primaria, 
+practicar en sus casas sin su profesor el tema de redondeo, ya que este 
+suele ser confuso, en especial al redondear números decimales. 
+Esto con el fin de que los alumnos no necesiten de alguien para aprender este 
+tema. Y debido a que es un tema que es necesario manejar muy bien como base de 
+la matemática de primaria.
+
+Entrada
+
+3.1415926545
+24.4444444444444
+29.87695489856
+
+Salida
+
+El numero 3.1415926545 redondeado a 0 decimales es= 3
+El numero 3.1415926545 redondeado a 1 decimales es= 3.1
+El numero 3.1415926545 redondeado a 2 decimales es= 3.14
+El numero 3.1415926545 redondeado a 3 decimales es= 3.142
+El numero 3.1415926545 redondeado a 4 decimales es= 3.1416
+El numero 3.1415926545 redondeado a 5 decimales es= 3.14159
+El numero 3.1415926545 redondeado a 6 decimales es= 3.141593
+El numero 3.1415926545 redondeado a 7 decimales es= 3.1415927
+El numero 3.1415926545 redondeado a 8 decimales es= 3.14159265
+El numero 24.4444444444 redondeado a 0 decimales es= 24
+El numero 24.4444444444 redondeado a 1 decimales es= 24.4
+El numero 24.4444444444 redondeado a 2 decimales es= 24.44
+El numero 24.4444444444 redondeado a 3 decimales es= 24.444
+El numero 24.4444444444 redondeado a 4 decimales es= 24.4444
+El numero 24.4444444444 redondeado a 5 decimales es= 24.44444
+El numero 24.4444444444 redondeado a 6 decimales es= 24.444444
+El numero 24.4444444444 redondeado a 7 decimales es= 24.4444444
+El numero 24.4444444444 redondeado a 8 decimales es= 24.44444444
+El numero 29.8769548986 redondeado a 0 decimales es= 30
+El numero 29.8769548986 redondeado a 1 decimales es= 29.9
+El numero 29.8769548986 redondeado a 2 decimales es= 29.88
+El numero 29.8769548986 redondeado a 3 decimales es= 29.877
+El numero 29.8769548986 redondeado a 4 decimales es= 29.8770
+El numero 29.8769548986 redondeado a 5 decimales es= 29.87695
+El numero 29.8769548986 redondeado a 6 decimales es= 29.876955
+El numero 29.8769548986 redondeado a 7 decimales es= 29.8769549
+El numero 29.8769548986 redondeado a 8 decimales es= 29.87695490
+
+
+alejandro.pachecorojas.@ucr.ac.cr 

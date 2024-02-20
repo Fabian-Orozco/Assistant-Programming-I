@@ -1,0 +1,68 @@
+procedure solucion1() do 
+
+  create n := 3
+
+  create matriz[n][n]
+
+  create jugadasJX := 0
+  create jugadasJO := 0
+  create casillasVacias := 0
+
+  create multTotal := 1;
+  
+  for create row := 0 hasta n-1 do 
+    for create col := 0 hasta n-1 do
+      create caracter := leerSiguienteCaracter();
+      if (caracter == "X")
+        matriz[row][col] = 5
+        jugadasJX++
+      else if (caracter == "O") 
+        matriz[row][col] = 7
+        jugadasJO++
+      else 
+        matriz[row][col] = 0
+        casillasVacias++
+    end 
+  end for 
+
+  // Recorre filas
+  for create row := 0 hasta n-1 do 
+    create sumaFila := 0;
+    for create col := 0 hasta n-1 do 
+      sumaFila := sumaFila + matriz[row][col];
+    end
+    multTotal := multTotal * sumaFila;
+  end
+
+  // Recorre columnas
+  for create col := 0 hasta n-1 do 
+    create sumaColumna = 0;
+    for create row := 0 hasta n-1 do
+      sumaColumna := sumaColumna + matriz[row][col]
+    end
+    multTotal := multTotal * sumaColumna;
+  end
+
+  // Recorre diagonales
+  create sumaDiaganolDes := 0
+  create sumaDiagonalAsc := 0
+  for create index := 0 hasta n-1 do
+    sumaDiaganolDes := sumaDiaganolDes + matriz[index][index]
+    sumaDiagonalAsc := sumaDiagonalAsc + matriz[n-1-index][index]
+  end 
+
+  multTotal := multTotal * sumaDiaganolDes * sumaDiagonalAsc
+  
+  if ((multTotal % (5*n)) == 0 && (multTotal % (7*n)) == 0)
+    imprimir("E")
+  else if ((multTotal % (5*n)) == 0) do 
+    imprimir("X")
+  else if ((multTotal % (7*n)) == 0) do
+    imprimir("-")
+  else if (casillasVacias != 0) do
+    imprimir("-")
+  else
+    imprimir("=")
+  end
+
+end

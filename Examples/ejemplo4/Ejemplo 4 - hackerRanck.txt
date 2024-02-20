@@ -1,0 +1,174 @@
+import java.util.Scanner;
+
+/**
+ * Helps tourists to calculate tips for services
+ */
+public class Solution
+{
+	/**
+	 * Gets data from standard input
+	 */
+	private Scanner input = null;
+
+	/**
+	 * Start the execution of the solution
+	 * @param args Command line arguments
+	 */
+	public static void main(String args[])
+	{
+		Solution solution = new Solution();
+		solution.run();
+	}
+
+
+    /**
+     * Run the solution. This method is called from main()
+     */
+    public void run() {
+        // Create object to read data from standard input
+        this.input = new Scanner(System.in);
+        
+        //crear impuesto := leerNumero()
+        double impuesto = this.input.nextDouble();
+        //crear tipoDeCambio := leerNumero()
+        double tipoDeCambio = this.input.nextDouble();
+        
+        //crear strPrecioTotal := ""
+        String strPrecioTotal = "";
+        //crear strPropinas := ""
+        String strPropinas = "";
+        //crear strPrecioTotalConPropina := ""
+        String strPrecioTotalConPropina = "";
+        
+        //crear costoTotalSinImpuesto := 0;
+        double costoTotalSinImpuesto = 0;
+        //crear costoTotalConImpuesto := 0;
+        double costoTotalConImpuesto = 0;
+        //crear costoTotalMonedaExtranjera := 0;
+        double costoTotalMonedaExtranjeraConImpuesto = 0;
+        
+        //while haySiguienteLinea() do
+        while ( this.input.hasNext() ) {
+            //crear strCostoItem = leerLinea()
+            String signo = this.input.next();
+            //crear costoItem;
+            double costoItem = this.input.nextDouble();
+            //crear costoItemConImpuesto;
+            double costoItemConImpuesto = 0;
+            //crear costoItemMonedaExtranjera;
+            double costoItemMonedaExtranjera = 0;
+            //if primeraPos(strCostoItem) == '+' do }
+            if (signo.equals("+")){
+                //costoItemConImpuesto := calcularImpuesto(costoItem)
+                costoItemConImpuesto = costoItem + (costoItem * impuesto / 100);
+                //costoItemMonedaExtranjera := convertir(costoItem)
+                costoItemMonedaExtranjera = costoItemConImpuesto * tipoDeCambio;
+            } else if (signo.equals("-")) { //else if primerPos(strCostItem) == '-' do
+                //costoItemConImpuesto = costoItem
+                costoItemConImpuesto = costoItem;
+                //costoItemMonedaExtranjera := convertir(costoItem)
+                costoItemMonedaExtranjera  = costoItemConImpuesto * tipoDeCambio;
+            }//end if
+            //costoTotalSinImpuesto := costoTotalSinImpuesto + costoItem
+            costoTotalSinImpuesto = costoTotalSinImpuesto + costoItem;
+            //costoTotalConImpuesto := costoTotalConImpuesto + costoItemConImpuesto
+            costoTotalConImpuesto = costoTotalConImpuesto + costoItemConImpuesto;
+            //costoTotalMonedaExtranjera := convertir(costoTotal)
+            costoTotalMonedaExtranjeraConImpuesto = costoTotalConImpuesto * tipoDeCambio;
+            //print "%12.2f %12.2f", costoItem, costoItemMonedaExtranjera
+            System.out.printf("%12.2f %12.2f%n",costoItemConImpuesto, costoItemMonedaExtranjera);
+        }
+        
+        //print "------------ -------------"
+        System.out.printf("------------ ------------%n");
+        //print "%12.2f %12.2f", costoTotal, costoTotalMonedaExtranjera
+        System.out.printf("%12.2f %12.2f%n", costoTotalConImpuesto, costoTotalMonedaExtranjeraConImpuesto);
+        //print "------------ -------------"     
+        System.out.printf("------------ ------------%n");
+        
+        //for indice := 1 hasta que indice == 4 do 
+        for (int indice = 1; indice <= 4; indice++) {
+            //crear propina := (costoTotalSinImpuesto)*(indice * 0.05) 
+            double propina = costoTotalSinImpuesto*(indice * 0.05);
+            //crear propinaMonedaLocal := convertir(propina)
+            double propinaMonedaLocal = propina * tipoDeCambio;
+            //crear porcentaje := indice*5
+            int porcentaje = indice * 5;
+            //print "%12.2f %12.2f %2d%", propina, propinaMonedaLocal, porcentaje 
+            System.out.printf("%12.2f %12.2f %2d%%\n", propina, propinaMonedaLocal, porcentaje);
+        }//end for
+        
+        //print "============ ============"
+        System.out.printf("============ ============%n");
+        
+        //for indice := 1 hasta que indice == 4 do 
+        for (int indice = 1; indice <= 4; indice++) {
+            //crear totalConPropina := costoTotalConImpuesto + (costoTotalSinImpuesto)(indice * 0.05)
+            double totalConPropina = costoTotalConImpuesto + (costoTotalSinImpuesto * indice * 0.05);
+            //crear totalConPropinaMonedaLocal := convertir(totalConPropina)
+            double totalConPropinaMonedaLocal = totalConPropina * tipoDeCambio;
+            //crear porcentaje := indice*5int porcentaje = indice * 5;
+            int porcentaje = indice * 5;
+            //print "%12.2f %12.2f %2d%", totalConPropina, totalConPropinaMonedaLocal, porcentaje 
+            System.out.printf("%12.2f %12.2f %2d%%\n", totalConPropina, totalConPropinaMonedaLocal, porcentaje);
+        }//end for
+        
+        // Close the standard input
+        this.input.close();
+    }
+    
+    /*
+    procedure ejecutarCalculoPropinas do 
+    
+        crear impuesto := leerNumero()
+        crear tipoDeCambio := leerNumero()
+        
+        //crear strPrecioIndividualConImpuesto := ""
+        crear strPrecioTotal := ""
+        crear strPropinas := ""
+        crear strPrecioTotalConPropina := ""
+        
+        crear costoTotalSinImpuesto := 0;
+        crear costoTotalConImpuesto := 0;
+        crear costoTotalMonedaExtranjera := 0;
+        
+        while haySiguienteLinea() do
+            crear strCostoItem = leerLinea()
+            crear costoItem;
+            crear costoItemConImpuesto;
+            crear costoItemMonedaExtranjera;
+            if primeraPos(strCostoItem) == '+' do 
+                costoItem := convertirANumero(strCostoItem) 
+                costoItemConImpuesto := calcularImpuesto(costoItem)
+                costoItemMonedaExtranjera := convertir(costoItem)
+            else if primerPos(strCostItem) == '-' do
+                costoItem = convertirANumero(strCostoItem)
+                costoItemConImpuesto = costoItem
+                costoItemMonedaExtranjera := convertir(costoItem)
+            end if
+            costoTotalSinImpuesto := costoTotalSinImpuesto + costoItem
+            costoTotalConImpuesto := costoTotalConImpuesto + costoItemConImpuesto
+            costoTotalMonedaExtranjera := convertir(costoTotal)
+            print "%12.2f %12.2f", costoItem, costoItemMonedaExtranjera
+        end while
+        
+        print "------------ -------------"
+        print "%12.2f %12.2f", costoTotal, costoTotalMonedaExtranjera
+        print "------------ -------------"       
+        for indice := 1 hasta que indice == 4 do 
+            crear propina := (costoTotalSinImpuesto)(indice * 0.05) 
+            crear propinaMonedaLocal := convertir(propina)
+            crear porcentaje := indice*5
+            print "%12.2f %12.2f %2d%", propina, propinaMonedaLocal, porcentaje 
+        end for
+        print "============ ============"
+        for indice := 1 hasta que indice == 4 do 
+            crear totalConPropina := costoTotalConImpuesto + (costoTotalSinImpuesto)(indice * 0.05)
+            crear totalConPropinaMonedaLocal := convertir(totalConPropina)
+            crear porcentaje := indice*5
+            print "%12.2f %12.2f %2d%", totalConPropina, totalConPropinaMonedaLocal, porcentaje 
+        end for
+    end procedure
+    */
+    
+}

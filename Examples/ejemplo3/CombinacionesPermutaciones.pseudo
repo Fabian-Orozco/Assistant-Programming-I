@@ -1,0 +1,93 @@
+procedure run do
+  create n := leerSiguienteEntero()
+  create r := leerSiguienteEntero()
+
+
+  if n < r || n < 0 || r < 0 do  // Revisar más adelante con la solución.
+    print "Entrada invalida"
+    return ERROR
+  end
+
+  create perNoRep := calcularPermutacionNoRep(n, r)
+  create perConRep := calcularPermutacionConRep(n, r)
+  create combNoRep := calcularCombinacionNoRep(n, r)
+  create combConRep := calcularCombinacionConRep(n,r)
+
+  imprimirRespuesta(perNoRep, perConRep, combNoRep, combConRep)
+end
+
+procedure factorial(numeroEntero) do
+
+  if numeroEntero igual 0 do 
+    return 1
+  end
+
+  create index := 1
+  create factorial := 1 
+
+  while (index <= numeroEntero) do
+    factorial := factorial * index
+    index++
+  end
+  /*
+  for index := 1 hasta index numeroEntero do
+    factorial := factorial * index
+  end
+  */
+end
+
+procedure calcularPermutacionNoRep(n, r) do 
+  /*
+  create denominador := (n-r)
+  denominador := factorial(denominador)
+  create numerador := factorial(n)
+  create permutacionNoRep := numerador / denominador
+  */
+
+  //create permutacionNoRep := factorial(n) / factorial(n-r)
+
+  create permutacionNoRep := 1
+
+  for create index := (n-r+1) hasta n do 
+    permutacionNoRep := permutacionNoRep * index
+  end
+
+  return permutacionNoRep 
+end
+
+procedure calcularPermutacionConRep(n, r) do 
+  // create permutacionConRep := n ^ r //Math.pow(n, r)
+  create permutacionConRep := 1
+  for create index := 1 hasta r do 
+    permutacionConRep := permutacionConRep * n
+  end
+  return permutacionConRep
+end
+
+procedure calcularCombinacionNoRep(n , r) do 
+  /*
+  create denominador := factorial(r) * factorial(n-r)
+  create numerador := factorial(n)
+  create combinacionNoRep := numerador / denominador
+  */
+
+  //create combinacionNoRep := factorial(n) / (factorial(r) * factorial(n-r))
+
+  create combinacionNoRep := permutacionNoRep(n,r) / factorial(r)
+
+  return combinacionNoRep
+end
+
+procedure calcularCombinacionConRep(n, r) do 
+  //create combinacionConRep := factorial(n+r-1) / (factorial(r) 
+    // * factorial(n-1))
+  create combinacionConRep := calcularCombinacionNoRep(n+r-1, r)
+  return combinacionConRep
+end 
+
+procedure imprimirRespuesta(permutacionNoRep, permutacionConRep, 
+                            combinacionNoRep, combinacionConRep) do 
+  print "                   No repetitions     With repetitions"
+  print "Permutations" +  permutacionNoRep +  permutacionConRep 
+  print "Combinations" +  combinacionNoRep +  combinacionConRep
+end

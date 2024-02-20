@@ -1,0 +1,48 @@
+Un número es feliz si al sumar el cuadrado de sus dígitos da 1, o si el cuadrado
+de los dígitos de esa suma da 1, y así sucesivamente. Por ejemplo, empecemos 
+con el número 23:
+
+ Paso 1:
+
+(2*2) + (3*3) = 13
+
+Como 13 es diferente de 1, repetimos con los dígitos de 13:
+
+Paso 2:
+
+(1*1) + (3*3) = 10
+
+Como 10 es diferente de 1, repetimos con los dígitos de 10:
+
+Paso 3:
+
+(1*1) + (0*0) = 1
+
+
+Como se alcanzó 1, aquí termina.
+
+
+Es decir, 23 es un número feliz en 3 pasos. Otros números pueden requerir menos
+o más pasos para llegar a ser felices. Si se dan N oportunidades a un grupo de
+números ¿llegarán a ser felices? Escriba un programa que ayude a saberlo. El
+programa recibirá en la primera línea de entrada la cantidad máxima de
+oportunidades (o pasos) N que tendrán los números para alcanzar la felicidad. En
+las líneas subsecuentes vendrán los números a probar.
+
+Ejemplo de entrada:
+
+10
+
+23
+999
+60
+1502301300
+10000000
+
+Ejemplo de salida:
+
+23: happy in 3 steps
+999: unhappy in 10 steps
+60: unhappy in 10 steps
+1502301300: happy in 5 steps
+10000000: happy in 1 steps​

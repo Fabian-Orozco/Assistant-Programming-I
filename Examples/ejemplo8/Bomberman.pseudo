@@ -1,0 +1,183 @@
+procedure lecturaDatos() do 
+  // Datos corrrespondientes a la matriz
+  create nRow := leerEntero()
+  create nCol := leerEntero()  
+  // Datos que corresponden al jugador
+  create poderAtaque := leerEntero()
+  create posJugRow := leerEntero()
+  create porJugCol := leerEntero()
+  // Datos de los enemigos
+  create numEnemigos := leerEntero()
+  create coordEnemigos := new enteros[numEnemigos][2]
+  create enemigoActual = 0;
+  while enemigoActual < numEnemigos do 
+    coordEnemigos[enemigoActual][0] := leerEntero()
+    coordEnemigos[enemigoActual][1] := leerEntero()
+    contador++;
+  end
+  // Datos de las bombas
+  create numBombas := leerEntero()
+  cerate coordBombas := new entero[numBombas][2]
+  for bombaActual := 0 hasta que bombaActual sea igual numBombas menos 1 do 
+    coordBombas[bombaActual][0] = leerEntero()
+    coordBombas[bombaActual][1] = leerEntero()
+  end
+
+  // Leer Matriz
+  create matriz = new char[nRow][nCol]
+  for row = 0 hasta que row sea igual a nRow menos 1 do 
+    for col = 0 hasta que col sea igual a nCol menos 1 do 
+      matriz[row][col] = leerCaracter();
+    end
+  end
+
+  // Actualizar la Matriz con jugador
+  matriz[posJugRow][posJugCol] = '@'
+
+  // Actualizar la Matriz con enemigos
+  for enemigoActual := 0 hasta que enemigoActual sea numEnemigos menos 1 do 
+    matriz[coordEnemigos[enemigoActual][0]]
+      [coordEnemigos[enemigoActual][1]] = '!'
+  end
+
+  // Actualizar la Matriz con bombas
+  for bombaActual := 0 hasta que bombaActual sea igual numBombas menos 1 do 
+    matriz[coordBombas[bombaActual][0]][coordBombas[bombaActual][1]] = '*'
+  end
+
+end
+
+procedure verificarMatriz(matriz, nRow, nCol, poderAtaque, numBombas, 
+    coordBombas, coordEnemigos) do 
+  create myMatriz := matriz
+  // Verificar explosión horizontal y verticales
+  if poderAtaque > 0 do 
+    for create bombaActual := 0 hasta que bombaActual sea igual a numBombas-1 do 
+      create myPosBomRow := coordBombas[bombaActual][0]
+      create myPosBomCol := coordBombas[bombaActual][1]
+      // Recorrer hacia el arriba
+      for create recorrido = 0 hasta que recorrido sea igual a poderAtaque do 
+        if myMatriz[myPosBomRow-recorrido][myPosBomCol] == '.' 
+            or myMatriz[myPosBomRow-recorrido][myPosBomCol] == '*' do 
+          continue
+        else if myMatriz[myPosBomRow-recorrido][myPosBomCol] == '#' do 
+          break
+        else if myMatriz[myPosBomRow-recorrido][myPosBomCol] == '%' do 
+          myMatriz[myPosBomRow-recorrido][myPosBomCol] = '.'
+          break
+        else if myMatriz[myPosBomRow-recorrido][myPosBomCol] == '!' 
+            or myMatriz[myPosBomRow-recorrido][myPosBomCol] == '@' do 
+          myMatriz[myPosBomRow-recorrido][myPosBomCol] = '.'
+        end
+      end
+      // Recorrer hacia el abajo
+      for create recorrido = 0 hasta que recorrido sea igual a poderAtaque do 
+        if myMatriz[myPosBomRow+recorrido][myPosBomCol] == '.' 
+            or myMatriz[myPosBomRow+recorrido][myPosBomCol] == '*' do 
+          continue
+        else if myMatriz[myPosBomRow+recorrido][myPosBomCol] == '#' do 
+          break
+        else if myMatriz[myPosBomRow+recorrido][myPosBomCol] == '%' do 
+          myMatriz[myPosBomRow+recorrido][myPosBomCol] = '.'
+          break
+        else if myMatriz[myPosBomRow+recorrido][myPosBomCol] == '!' 
+            or myMatriz[myPosBomRow+recorrido][myPosBomCol] == '@' do 
+          myMatriz[myPosBomRow+recorrido][myPosBomCol] = '.'
+        end
+      end
+      // Recorrer hacia el abajo
+      for create recorrido = 0 hasta que recorrido sea igual a poderAtaque do 
+        if myMatriz[myPosBomRow][myPosBomCol-recorrido] == '.' 
+            or myMatriz[myPosBomRow][myPosBomCol-recorrido] == '*' do 
+          continue
+        else if myMatriz[myPosBomRow][myPosBomCol-recorrido] == '#' do 
+          break
+        else if myMatriz[myPosBomRow][myPosBomCol-recorrido] == '%' do 
+          myMatriz[myPosBomRow][myPosBomCol-recorrido] = '.'
+          break
+        else if myMatriz[myPosBomRow][myPosBomCol-recorrido] == '!' 
+            or myMatriz[myPosBomRow][myPosBomCol-recorrido] == '@' do 
+          myMatriz[myPosBomRow][myPosBomCol-recorrido] = '.'
+        end
+      end
+      // Recorrer hacia el abajo
+      for create recorrido = 0 hasta que recorrido sea igual a poderAtaque do 
+        if myMatriz[myPosBomRow][myPosBomCol+recorrido] == '.' 
+            or myMatriz[myPosBomRow][myPosBomCol+recorrido] == '*' do 
+          continue
+        else if myMatriz[myPosBomRow][myPosBomCol+recorrido] == '#' do 
+          break
+        else if myMatriz[myPosBomRow][myPosBomCol+recorrido] == '%' do 
+          myMatriz[myPosBomRow][myPosBomCol+recorrido] = '.'
+          break
+        else if myMatriz[myPosBomRow][myPosBomCol+recorrido] == '!' 
+            or myMatriz[myPosBomRow][myPosBomCol+recorrido] == '@' do 
+          myMatriz[myPosBomRow][myPosBomCol+recorrido] = '.'
+        end
+      end
+    end
+  end
+  // Verificar explosión por zona
+  if poderAtaque < 0 do 
+    for create bombaActual := 0 hasta que bombaActual sea igual a numBombas - 1 
+        do 
+      //Encontrar row inicial y final del area de explosión
+      create myPosRowIni := max(coordBombas[bombaActual][0]-poderAtaque, 0);
+      create myPosRowFin := min(coordBombas[bombaActual][0]+poderAtaque, nRow);
+      //Encontrar col inicial y final del area de explosión
+      create myPosColIni := max(coordBombas[bombaActual][1]-poderAtaque, 0);
+      create myPosColFin := min(coordBombas[bombaActual][1]+poderAtaque, nCol);
+
+      // Revisar area de explosión
+      for create row = myPosRowIni hasta que sea igual a myPosRowFin do 
+        for create col = myPosColIni hasta que sea igual a myPosColFin do 
+          if myMatriz[row][col] == '.' or myMatriz[row][col] == '*' do 
+            continue
+          else if myMatriz[row][col] == '#' do 
+            continue
+          else if myMatriz[row][col] == '%' do 
+            myMatriz[row][col] = '.'
+          else if myMatriz[row][col] == '!' or myMatriz[row][col] == '@' do 
+            myMatriz[row][col] = '.'
+          end
+        end
+      end
+    end
+  end
+  return myMatriz;
+end
+
+procedure verificarEnemigosVivos(matriz, nRow, nCol) do 
+  create numEnemigosVivos := 0;
+  for create row := 0 hasta que sea igual a nRow-1 do 
+    for create col := 0 hasta que sea igua a nCol-1 do 
+      if matriz[row][col] == '!' do 
+        numEnemigosVivos++
+      end
+    end
+  end
+  create newPosEnemigos := enteros[numEnemigosVivos][2] 
+  create numEnemigo = 0;
+  for create row := 0 hasta que sea igual a nRow-1 do 
+    for create col := 0 hasta que sea igua a nCol-1 do 
+      if matriz[row][col] == '!' do 
+        newPosEnemigos[numEnemigo][0] := row
+        newPosEnemigos[numEnemigo][1] := col
+        numEnemigo++
+      end
+    end
+  end
+  return newPosEnemigos
+end
+
+procedure verificarJugadorVivo(matriz, nRow, nCol) do
+  create jugadorVivo = false 
+  for create row := 0 hasta que sea igual a nRow-1 do 
+    for create col := 0 hasta que sea igua a nCol-1 do 
+      if matriz[row][col] == '@' do 
+        jugadorVivo = true
+      end
+    end
+  end
+  return jugadorVivo
+end

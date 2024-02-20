@@ -1,0 +1,27 @@
+procedure isHappyIn(number, maxSteps) do 
+  create suma := number;
+  create contador := 0;
+  for create index := 0 hasta maxSteps - 1 do 
+    suma := sumaDeCuadrados(suma)
+    contador++
+    if suma == 1 do 
+      break
+    end if 
+  end for
+  if suma != 1 do 
+    contador := -1
+  end
+  return contador
+end procedure 
+
+procedure sumaDeCuadrados(number) do 
+  create myNumber = number
+  String strNumero := toString(number) // Java -> "" + number
+  create numDigitos := sizeStr(trNumero)
+  create sumaCuadrados := 0;
+  for create index := 1 hasta numDigitos do 
+    sumaCuadrados = sumaCuadrados + mod(myNumber, 10)^2
+    myNumber = myNumber/10
+  end for
+  return sumaCuadrados
+end

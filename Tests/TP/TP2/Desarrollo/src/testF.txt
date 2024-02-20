@@ -1,0 +1,25 @@
+4 4
+
+ 01/01,  02/01,    34/01,    35/01
+-03/08, -02/08,    00/08,    02/08
+ 00/01,  00/01, 99999/99, 99999/98
+-01/09, -01/09,    00/09,    01/09
+
+>=CEL(C4)
+>=CONJUNTO(Fabian, A1, B2, C4)
+>=IMPRIMIR(Fabian)
+>=SUMA(Fabian)
+>=IMPRIMIR()
+>=IMPRIMIR(Fabian)
+>=MULT(Fabian)
+>=IMPRIMIR()
+>=IMPRIMIR(Fabian)
+>=MIN(D1:A4)
+>=IMPRIMIR()
+>=IMPRIMIR(Fabian)
+>=MAX(D1:A4)
+>=IMPRIMIR()
+>=IMPRIMIR(Fabian)
+>=MULT(A2:A4)
+>=IMPRIMIR()
+>=IMPRIMIR(Fabian)

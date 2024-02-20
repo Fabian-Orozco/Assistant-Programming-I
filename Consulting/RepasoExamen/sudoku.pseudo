@@ -1,0 +1,67 @@
+procedure run() do 
+  // Lectura de datos
+  create n := readInt()
+  create array of ints sudoku[nn][nn]
+  for (create row := 0; row < (nn); row++) do
+    for (create col := 0; col < (nn); col++) do 
+      if hasReadInt() do
+        sudoku[row][col] := readInt()
+      else
+        read() // los '.' se cambian por un cero
+      end
+    end
+  end
+  // revisar Filas
+  revisarFila(sudoku)
+  // revisar Columnas
+  revisarColumnas(sudoku)
+  // revisar bloques
+  revisarBloques(sudoku)
+end
+
+procedure revisarFila(int[][] sudoku) do
+  // Revisar fila
+  for (create row := 0; row < (nn); row++) do 
+    create array of int digits[nn]
+    for (create col := 0; col < (nn); col++) do
+      if sudoku[row][col] > 0 do 
+        digits[sudoku[row][col]-1]++
+        if digits[sudoku[row][col]-1] > 1 do 
+          print "r" + row + "," + col
+        end
+      end
+    end
+  end
+end
+
+  // Revisar columnas
+procedure revisarColumnas(int[][] sudoku) do
+  for (create col := 0; col < (nn); col++) do 
+    create array of int digits[nn]
+    for (create row := 0; row < (nn); row++) do
+      if sudoku[row][col] > 0 do 
+        digits[sudoku[row][col]-1]++
+        if digits[sudoku[row][col]-1] > 1 do 
+          print "c" + row + "," + col
+        end
+      end
+    end
+  end
+end 
+
+// Revisar bloques
+procedure revisarBloques(int[][] sudoku) do
+  for (create brow = 0; brow < n; brow++) do
+    for (create bcol = 0; bcol < n; bcol++) do
+      create array of int digits[nn]
+      for (create irow = brow n; irow < (brow * n) + n; irow++) do
+        for (create icol = bcol * n; icol < (bcol * n) + n; icol++) do 
+          digits[sudoku[irow][icol]-1]++
+          if digits[sudoku[irow][icol]-1] > 1 do 
+            print "b" + row + "," + col
+          end
+        end
+      end
+    end
+  end
+end

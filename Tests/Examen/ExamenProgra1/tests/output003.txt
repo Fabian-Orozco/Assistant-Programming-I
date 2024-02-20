@@ -1,0 +1,4 @@
+Palabra    Total
+---------- -----
+    Pepito     2
+       cas     6

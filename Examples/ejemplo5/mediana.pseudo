@@ -1,0 +1,44 @@
+procedure ejecutar() do
+  create numElementos;
+  create arrayElementos := lectura(numElementos)
+  //numElementos = obtenerNumeroElementos(arrayElementos);
+  create mediana := calcularMediana(numElementos, arrayElementos)
+  imprimir(mediana)
+end procedure
+
+procedure lectura(numElementos) do
+  numElementos := leerEntero()
+  create arrayElementos[numElementos]
+  for create index := 0 hasta numElementos-1 do
+    arrayElementos[index] := leerReal()
+  end for
+  return arrayElementos
+end procedure 
+
+procedure calcularMediana(numElementos, arrayElementos) do
+  ordenarArreglo(arrayElementos)
+  create mediana
+  if numElementos % 2 == 0 do
+    mediana := (arrayElementos[(numElementos/2)-1] 
+              + arrayElementos[(numElementos/2)]) / 2
+  else do 
+    mediana := arrayElementos[numElementos/2]
+  end if
+  return mediana
+end procedure 
+
+procedure ordenarArreglo(numElementos, arrayElementos) do 
+  for indexI := 0 hasta numElementos-2 do
+    for indexJ := indexI hasta numElementos-1 do 
+      if arrayElementos[indexJ+1] < arrayElementos[indexI] do
+        create tmp = arrayElementos[indexI]
+        arrayElementos[indexI] = arrayElementos[indexJ+1]
+        arrayElementos[indexJ+1] = tmp
+      end 
+    end
+  end
+end procedure
+
+procedure imprimir(mediana) do
+  imprimir(mediana)
+end procedure 

@@ -1,0 +1,5 @@
+Palabra    Total
+---------- -----
+      casa     7
+  amarillo     7
+      rojo    16

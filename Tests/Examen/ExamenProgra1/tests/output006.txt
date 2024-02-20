@@ -1,0 +1,26 @@
+FACTURA 001
+Con cupon 50%
+  ARTICULO   PRECIO DESCUENTO
+---------- -------- --------
+      Atun   100.00
+  Frijoles    50.00
+   Helados   100.00    50.00
+     Leche   100.00    50.00
+---------- -------- --------
+  Subtotal   150.00  -100.00
+     Total   250.00
+============================
+FACTURA 002
+Sin cupon
+  ARTICULO   PRECIO DESCUENTO
+---------- -------- --------
+      Atun   100.00
+  Frijoles    50.00
+   Helados   100.00
+     Leche   100.00
+    Huevos    75.00
+       Pan    25.00
+---------- -------- --------
+  Subtotal   450.00    -0.00
+     Total   450.00
+============================

@@ -1,0 +1,134 @@
+procedure solucion2() do 
+
+  create n := 3
+
+  create matriz[n][n] de caracteres o cadenas
+
+  for create row := 0 hasta n-1 do 
+    for create col := 0 hasta n-1 do
+      create caracter := leerSiguienteCaracter();
+      matriz[row][col] := caracter;
+    end 
+  end for 
+
+  bool entradaInvalida := false
+  bool partidaEnProgreso := false
+  bool jugadorXGana := true
+  bool jugadorOGana := true
+  int contadorJX := 0
+  int contadorJO := 0
+
+  for create row := 0 hasta n-1 do 
+    for create col := 0 hasta n-1 do
+      if matriz[row][col] != "X" and matriz[row][col] != "O" 
+          and matriz[row][col] != "-" do 
+        entradaInvalida ]:= true;
+      end
+      if matriz[row][col] == "-" do 
+        partidaEnProgreso := true
+      end
+      if matriz[row][col] == "O" do 
+        contadorJO++
+      end
+      if matriz[row][col] == "X" do 
+        contadorJX++
+      end
+    end for 
+  end for
+
+  if contadorJO > contadorJX do 
+    if contadorJO-1 > contadorJX do 
+      entradaInvalida := true
+    end
+  else if contadorJO < contadorJX-1 do 
+    entradaInvalida := true
+  end
+
+  if entradaInvalida do 
+    print "E"
+    return
+  else  
+    if partidaEnProgreso do 
+      print "-"
+      return
+    end
+  end
+
+  // Gana algún jugador veifica filas
+  for create row := 0 hasta n-1 do 
+    jugadorXGana := true
+    jugadorOGana := true
+    for create col := 0 hasta n-1 do 
+      if matriz[row][col] != "X" do 
+        jugadorXGana := false
+      end
+      if matriz[row][col] != "O" do 
+        jugadorXGana := false
+      end
+    end for
+    if jugadorXGana and jugadorOGana do
+      print "E"
+      return
+    else if jugadorXGana
+      print "X"
+      return
+    else if jugadorOGana
+      print "0"
+      return
+    end
+  end for
+
+  // Gana algun jugador verifica columnas
+  for create col := 0 hasta n-1 do 
+    jugadorXGana := true
+    jugadorOGana := true
+    for create row := 0 hasta n-1 do
+      if matriz[row][col] != "X" do 
+        jugadorXGana := false
+      end
+      if matriz[row][col] != "O" do 
+        jugadorXGana := false
+      end
+    end for
+    if jugadorXGana and jugadorOGana do
+      print "E"
+      return
+    else if jugadorXGana
+      print "X"
+      return
+    else if jugadorOGana
+      print "0"
+      return
+    end
+  end for
+
+  // Gana algun jugador Verifica diagonales
+  jugadorXGana := true
+  jugadorOGana := true
+  for create index := 0 hasta n-1 do
+    if matriz[index][index] != "X" do 
+        jugadorXGana := false
+    end
+    if matriz[n-1-index][index] != "X" do 
+        jugadorXGana := false
+    end
+    if matriz[index][index] != "0" do 
+        jugadorOGana := false
+    end
+    if matriz[n-1-index][index] != "0" do 
+        jugadorOGana := false
+    end
+  end 
+
+  if jugadorXGana and jugadorOGana do
+    print "E"
+    return
+  else if jugadorXGana
+    print "X"
+    return
+  else if jugadorOGana
+    print "0"
+    return
+  end
+
+end
